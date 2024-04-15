@@ -1,0 +1,97 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+.container {
+  width: 80%;
+  margin: 20px auto;
+  margin-top: 130px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1,
+h2 {
+  color: #2c662d;
+}
+
+h1 {
+  border-bottom: 2px solid #2c662d;
+  padding-bottom: 10px;
+}
+
+h2 {
+  margin-top: 30px;
+}
+
+p {
+  line-height: 1.6;
+}
+
+.team-member {
+  margin-bottom: 20px;
+}
+
+.role {
+  font-style: italic;
+  color: #555;
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9em;
+  color: #666;
+}
+
+.header {
+  display: flex;
+  height: 80px;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: None;
+  color: #E4EFE7;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+#logo {
+  height: 80px;
+  /* Adjust the size as needed */
+  margin-right: 20px;
+}
+
+.header-buttons {
+  margin-right: 40px;
+}
+
+nav button {
+  background: none;
+  border: 2px solid #225522;
+  padding: 10px 20px;
+  color: #225522;
+  font-size: 16px;
+  margin-right: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+nav button:hover {
+  background-color: #E4EFE7;
+  color: #2D6A4F;
+}
+
+h1 {
+  font-size: 24px;
+  margin: 0;
+  font-weight: normal;
+  /* for a sleek look */
+}
