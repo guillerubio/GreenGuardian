@@ -1,5 +1,5 @@
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Roboto', sans-serif;
   background-color: #f4f4f9;
   color: #333;
 }
@@ -19,8 +19,9 @@ h2 {
 }
 
 h1 {
-  border-bottom: 2px solid #2c662d;
-  padding-bottom: 10px;
+  font-weight: normal;
+  font-size: 24px;
+  margin: 0;
 }
 
 h2 {
@@ -47,6 +48,8 @@ footer {
   color: #666;
 }
 
+/* Header */
+
 .header {
   display: flex;
   height: 80px;
@@ -56,15 +59,20 @@ footer {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: None;
+  background-color: rgba(255, 255, 255, 0.88);
   color: #E4EFE7;
   padding: 10px 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 1000;
 }
 
+.header h1 {
+  font-weight: bold;
+  font-size: 32px;
+}
+
 #logo {
-  height: 80px;
+  height: 50px;
   /* Adjust the size as needed */
   margin-right: 20px;
 }
@@ -89,9 +97,12 @@ nav button:hover {
   color: #2D6A4F;
 }
 
-h1 {
-  font-size: 24px;
-  margin: 0;
-  font-weight: normal;
-  /* for a sleek look */
+@media (max-width: 1200px) {
+
+  .header h1 {
+    display: none;
+  }
+
 }
+
+/* End of Header */
