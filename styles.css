@@ -103,6 +103,20 @@ nav button:hover {
     display: none;
   }
 
+  .header-buttons {
+    margin-right: 40px;
+  }
+
+  nav button {
+    padding: 8px 12px;
+    margin-right: 3px;
+    font-size: larger;
+    border: 1px solid #225522;
+
+  }
+
+
+
 }
 
 /* End of Header */
