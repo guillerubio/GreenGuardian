@@ -120,3 +120,12 @@ nav button:hover {
 }
 
 /* End of Header */
+
+/* Team */
+
+.team h1 {
+  font-size: xx-large;
+  margin-bottom: 20px;
+}
+
+/* End of Team*/
