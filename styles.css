@@ -52,17 +52,14 @@ footer {
 
 #logo {
   transition: opacity 0.2s ease-in-out;
-  /* Smooth transition for opacity changes */
 }
 
 #logo:hover {
   opacity: 0.8;
-  /* Slightly transparent on hover */
 }
 
 #logo:active {
   opacity: 0.4;
-  /* More transparent on click */
 }
 
 
@@ -223,6 +220,11 @@ footer {
 .member-details {
   margin-left: 20px;
   /* Spacing between image and text */
+}
+
+.team-title {
+  margin-bottom: 30px;
+  font-size: x-large;
 }
 
 @media (max-width: 768px) {
