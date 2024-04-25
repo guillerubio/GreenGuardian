@@ -4,14 +4,156 @@ body {
   color: #333;
 }
 
+/* UPDATES */
+
+.updates {
+  margin-bottom: 0px;
+}
+
+.updates h2 {
+  margin-top: 0px;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.recent-update {
+  padding: 5px 8px;
+  border-radius: 5px;
+}
+
+.recent-update p {
+  margin: 0;
+  font-size: 16px;
+}
+
+/* REFERENCES*/
+
+.references {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.references ol {
+  list-style-type: decimal;
+  margin-left: 1.5em;
+}
+
+.references ol li {
+  margin-bottom: 1em;
+}
+
+.references a {
+  color: blue;
+  text-decoration: none;
+}
+
+.references a:hover {
+  text-decoration: underline;
+}
+
+/* CONTAINER */
+
 .container {
   width: 80%;
   margin: 20px auto;
   margin-top: 130px;
-  padding: 20px;
+  padding: 30px 50px;
   background-color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+.related-body h3 {
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+
+.related-body p {
+  margin-top: 0px;
+}
+
+.second {
+  margin-top: 10px;
+}
+
+/* MILESTONES */
+
+.milestones-section {
+  background-color: #f4f4f9;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.milestones {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.milestones li {
+  margin-bottom: 20px;
+  position: relative;
+  padding-left: 30px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.milestones li.completed {
+  color: #2c662d;
+}
+
+
+
+.milestones li.completed:before {
+  content: "\2713";
+  /* Checkmark symbol */
+  color: #2c662d;
+  position: absolute;
+  left: 0;
+  font-size: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+h2 {
+  color: #2c662d;
+  margin-bottom: 20px;
+}
+
+.milestones-section h2 {
+  margin-top: 0px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+  .milestones li {
+    font-size: 14px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+}
+
+
+/* EOFMILESTONE*/
+
+h2 {
+  margin-top: 30px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+
+
+
 
 h1,
 h2 {
@@ -132,6 +274,10 @@ nav button:hover {
 
   }
 
+  .container {
+    padding: 30px;
+  }
+
 
 
 }
@@ -146,14 +292,7 @@ body {
   color: #333;
 }
 
-.container {
-  width: 80%;
-  margin: 20px auto;
-  margin-top: 130px;
-  padding: 20px;
-  background-color: white;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+
 
 h1,
 h2 {
