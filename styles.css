@@ -311,6 +311,8 @@ h2 {
 
 p {
   line-height: 1.6;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .team-member {
