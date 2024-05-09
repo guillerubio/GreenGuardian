@@ -285,7 +285,7 @@
       </p>
       <div class="image-grid">
         <img src="/assets/sensor_calibration/1.png">
-        <img src="/assets/sensor_calibration/2.png">
+        <img src="/assets/sensor_calibration/2.png" style="width:50%; height: 70%;">
         <img src="/assets/sensor_calibration/3.png">
     </section>
 
@@ -294,15 +294,26 @@
       <p>Our goal is to take care of a plant with minimal or no human effort. To this end, we decided to design an actuation 
          system that would water the plant as and when directed by a decision making model. This decision making model is designed
          by utilizing the plant specific care instructions, along with the sensor data for soil moisutre and ambient light.</p>
+      <p>We define some terms for our system:
+      <li>Environment: Plant + data collected by sensors​</li>
+      <li>State: Current conditions of the plant defined by data collected from soil moisture, temperature, humidity, and ambient light sensors.​</li>
+      <li>Agent: Arduino Controller</li>
+      <li>Action: Water the plant / Do not water the plant​</li></p>
+      
       <h3> Initial Approach: Rule Based Decision Making</h3>
       <li> Use thresholds based on plant specific care instructions: watering frequency, light requirements, other conditions (e.g., water after soil is completely dried out).</li>
       <li> Do not water plants at night.​ Because of absence of sunlight, leaves do not dry off and are prone to fungal infestations.</li>
       <li> Water specific amount corresponding to plant care instructions.​</li>
+      
       <h3> Advanced Approach: Actuation-with-Learning</h3>
       <li>Develop a comprehensive dataset from plant sensor data collected over several days.​</li>
       <li>Establish a correlation between the plant's condition and actuation actions, focusing on watering frequency and volume.​</li>
       <li>Utilize this "learning" approach to create a plant-specific model.​</li>
       <li></li>Enhance decision-making processes by optimizing factors such as thresholds and watering parameters.​</li>
+      <figure><img src="/assets/Actuation/Actuation_1.png">
+      <figcaption>Rule Based Actuation</figcaption></figure>
+      <figure><img src="/assets/Actuation/Actuation_2.png">
+      <figcaption>Actuation with Learning</figcaption></figure>
       
     </section>
     <section>
@@ -312,7 +323,7 @@
       <li>Perform energy profiling to realize energy consumption.​</li>
       <li>Harvest Solar Energy to power system.​</li>
       <li>Apply optimization techniques.​</li>
-      <img src="/assets/sensor_calibration/1.png">
+      <img src="/assets/Energy_Harvesting.png">
       <h3>Optimization Techniques</h3>
       <li>Have <b>separate power sources</b> for sensing module and control module.​
           - Gives software control over sensor activation and operation.</li>
