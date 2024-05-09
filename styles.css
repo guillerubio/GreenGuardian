@@ -20,6 +20,9 @@ body {
   padding: 5px 8px;
   border-radius: 5px;
 }
+figcaption {
+        text-align: center; /* Center the caption text */
+    }
 
 .recent-update p {
   margin: 0;
