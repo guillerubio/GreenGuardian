@@ -140,8 +140,100 @@ h2 {
   }
 }
 
+.milestone-card {
+  width: 100%;
+  /* Wider cards */
+  max-width: 500px;
+  /* Larger max width for better visibility */
+  height: 150px;
+  /* Shorter cards */
+  margin: 10px auto;
+  /* Centered with automatic margins */
+  perspective: 1500px;
+  /* Adjust perspective for a smoother flip */
+}
+
+.milestone-front,
+.milestone-back {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  backface-visibility: hidden;
+  /* Elements are not visible when flipped */
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.8s, box-shadow 0.3s;
+  /* Slower flip animation */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: #fff;
+}
+
+.milestone-front {
+  background-color: #333;
+  /* Neutral color for the front */
+}
+
+.milestone-back {
+  background-color: #555;
+  /* Slightly darker for the back */
+  transform: rotateY(180deg);
+  /* Start flipped */
+}
+
+.milestone-card:hover .milestone-front {
+  transform: rotateY(-180deg);
+  /* Rotate front out */
+}
+
+.milestone-card:hover .milestone-back {
+  transform: rotateY(0deg);
+  /* Rotate back in */
+}
+
+.completed .milestone-front {
+  background-color: #4CAF50;
+  /* Green for completed */
+  font-weight: bold;
+  /* Bold for emphasis */
+}
+
+.uncompleted .milestone-front {
+  background-color: #f44336;
+  /* Red for uncompleted */
+}
+
+
+
 
 /* EOFMILESTONE*/
+
+
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+
+.image-grid img {
+  width: 100%;
+  height: auto;
+}
+
+
+@media (max-width: 600px) {
+  .image-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 h2 {
   margin-top: 30px;
