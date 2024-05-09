@@ -280,11 +280,45 @@
       <p>As we do not want affordability of the system to compromise the quality, we needed to calibrate the sensors so
          that the data they produce is reliable. We began with calibrating our DHT11 temperature and humidity sensor. The 
          below method involved taking initial readings from the sensor and comparing it to the temperature and humidity 
-         values as measured by an iPhone. We then calibrated the sensor readings to the correct value through one-stop calibration.</p>
+         values as measured by an iPhone. We then calibrated the sensor readings to the correct value through one-stop calibration.
+        The sensor calibration code is available on our github repository.
+      </p>
       <div class="image-grid">
         <img src="/assets/sensor_calibration/1.png">
         <img src="/assets/sensor_calibration/2.png">
         <img src="/assets/sensor_calibration/3.png">
+    </section>
+
+    <section>
+      <h2>Plant Care through Actuation</h2>
+      <p>Our goal is to take care of a plant with minimal or no human effort. To this end, we decided to design an actuation 
+         system that would water the plant as and when directed by a decision making model. This decision making model is designed
+         by utilizing the plant specific care instructions, along with the sensor data for soil moisutre and ambient light.</p>
+      <h3> Initial Approach: Rule Based Decision Making</h3>
+      <li> Use thresholds based on plant specific care instructions: watering frequency, light requirements, other conditions (e.g., water after soil is completely dried out).</li>
+      <li> Do not water plants at night.​ Because of absence of sunlight, leaves do not dry off and are prone to fungal infestations.</li>
+      <li> Water specific amount corresponding to plant care instructions.​</li>
+      <h3> Advanced Approach: Actuation-with-Learning</h3>
+      <li>Develop a comprehensive dataset from plant sensor data collected over several days.​</li>
+      <li>Establish a correlation between the plant's condition and actuation actions, focusing on watering frequency and volume.​</li>
+      <li>Utilize this "learning" approach to create a plant-specific model.​</li>
+      <li></li>Enhance decision-making processes by optimizing factors such as thresholds and watering parameters.​</li>
+      
+    </section>
+    <section>
+      <h2> Energy Autonomy through Energy Harvesting</h2>
+      Our system goals are self-sufficiency, long lifespan, and energy efficiency. However, the system components are battery powered and will get depleted over time.​ Therefore, we
+      design an energy harvesting system to power GreenGuardian as a stand-alone, long-term solution.
+      <li>Perform energy profiling to realize energy consumption.​</li>
+      <li>Harvest Solar Energy to power system.​</li>
+      <li>Apply optimization techniques.​</li>
+      <img src="/assets/sensor_calibration/1.png">
+      <h3>Optimization Techniques</h3>
+      <li>Have <b>separate power sources</b> for sensing module and control module.​
+          - Gives software control over sensor activation and operation.</li>
+      <li>Sensor data is <b>not highly variable</b>, so we are not sensing continuously​. Sensors are turned off and Arduino is in low-power mode for majority of the time.​</li>
+      <li><b>Adaptive Duty Cycling</b> ​- Battery is charged on good weather days, and sensor activity is lessened on bad weather days (Low Battery Level + Ambient Light below threshold)​. 
+             This enables us to adapt duty cycling to battery power and availability of ambient light.​</li>
     </section>
 
 
@@ -344,6 +378,7 @@
             IEEE
             Trans. Wireless Commun., vol. 11, no. 4, pp. 1434–1445, Apr. 2012, doi: 10.1109/TWC.2012.032812.110623.
           </li>
+          <li>Oregon State University Extension Service. (n.d.). Environmental factors affecting plant growth. Retrieved May 6, 2024, from https://extension.oregonstate.edu/gardening/techniques/environmental-factors-affecting-plant-growth </li>
         </ol>
       </div>
     </section>
