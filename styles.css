@@ -6,6 +6,10 @@ body {
 
 /* UPDATES */
 
+.body img {
+  width: 100%;
+}
+
 .updates {
   margin-bottom: 0px;
 }
@@ -20,9 +24,11 @@ body {
   padding: 5px 8px;
   border-radius: 5px;
 }
+
 figcaption {
-        text-align: center; /* Center the caption text */
-    }
+  text-align: center;
+  /* Center the caption text */
+}
 
 .recent-update p {
   margin: 0;
@@ -196,19 +202,16 @@ h2 {
 
 .milestone-card:hover .milestone-back {
   transform: rotateY(0deg);
-  /* Rotate back in */
 }
 
 .completed .milestone-front {
   background-color: #4CAF50;
-  /* Green for completed */
   font-weight: bold;
-  /* Bold for emphasis */
+
 }
 
 .uncompleted .milestone-front {
   background-color: #f44336;
-  /* Red for uncompleted */
 }
 
 
@@ -221,12 +224,21 @@ h2 {
 .image-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
 }
 
 
 .image-grid img {
-  width: 100%;
+  width: 80%;
   height: auto;
 }
 
