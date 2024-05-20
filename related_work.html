@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/android-chrome-192x192.png">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <title>Green Guardian: An IoT Solution for Plant Care</title>
+</head>
+
+  <body>
+  <div class="header">
+    <a href="index.html">
+      <img src="assets/GreenGuardians.png" alt="Green Guardians Logo" id="logo">
+    </a>
+    <h1>Green Guardian - An IoT Solution for Plant Care</h1>
+    <nav class="header-buttons">
+      <button onclick="location.href='team.html'">Team</button>
+      <button onclick="window.location.href='https://github.com/DivyaSanjay/Green_Guardian'">GitHub</button>
+      <button onclick="location.href='related_work.html'">Related Work</button>
+    </nav>
+  </div>
+
+  <div class="container second">
+    <section>
+      <h2 style="margin-top: 0px;">Related Work</h2>
+      <p>Various researchers have explored the design of IoT-based smart plant monitoring systems. Judika et al.
+      investigated the potential benefits of such a system in monitoring Chili plants in Indonesia [2]. Their system
+      is capable of monitoring the moisture, pH, and salinity of the soil and autonomously adjusting these parameters
+      using water, pH up/down liquid, and AB mix, respectively [2]. While the system functions effectively in the field, it
+      is specifically designed to cater to a single type of plant. Kush et al. endeavored to broaden the scope of plant
+      monitoring by introducing a smart pot [1]. However, this approach is marred by two significant flaws: users are
+      required to replace their existing pots with smart pots, and the pot relies on a user to regularly charge its
+      battery. Antti et al. devised an AI system capable of monitoring plant health, yet it relies on human
+      intervention for plant care based on the interpreted data [3]. The limitations of previous research underscore the importance
+      of developing a self-sufficient autonomous plant monitoring system.
+      </p>
+      <div class="related-body">
+      <h3>Sensor Modalities</h3>
+      <p>For monitoring plant health, there are various features that need to be observed and maintained, such as soil
+        health through pH and moisture content sensing, amount of ambient light and humidity. These parameters can be
+        conveniently calculated using IoT sensors, and are paramount for effective monitoring. The collected data
+        assists in making decisions about irrigation, soil nutrition, and determining which plant types to grow. The
+        pH
+        sensor serves the purpose of monitoring the nutrient levels necessary for the growth of a plant [10]. The soil
+        moisture sensor functions to assess the moisture content within the soil, mitigating the risk of plant
+        desiccation due to inadequate watering practices [1,2]. Additionally, the monitoring of air temperature and
+        humidity, often facilitated by the DHT11 sensor, stands as another crucial aspect of plant monitoring systems
+        [1, 2, 10].
+      </p>
+      <h3>
+        Energy Harvesting</h3>
+      <p>
+        Ideally, IoT systems should be self-sustainable and functional for a long period of time. Especially for our
+        approach to a self-contained plant monitoring system that requires minimal to no human interference, we would
+        like to ensure a longer network lifetime. With this is mind, using batteries as the primary or only power
+        source
+        poses several challenges, as highlighted in [7]: (i) finite lifetime, (ii) depletion and leakage issues, (iii)
+        expensive maintenance and replacement costs, (iv) effects due to temperature, (v) impact of battery chemicals
+        on
+        surrounding environment, (vi) problems in maintenance and replacement due to IoT systems deployment in
+        inaccessible or remote locations. Therefore, we have to come up with energy harvesting (EH) techniques to
+        provide secondary power sources or even replace batteries altogether. Work by T. Sanislav et al. extensively
+        investigates the major energy sources that can be used for EH and subsequent models for this purpose, choosing
+        either an immediate Harvest-Use or Harvest-Store-Use model [8].
+
+        The work by T. Sanislav evaluated a host of EH sources, encompassing ambient, human, organic, mechanical, and
+        hybrid sources. Criteria for evaluation included (i) technology, (ii) power density, (iii) controllability,
+        (iv)
+        predictability, and (v) availability. Based on their findings, solar energy is easily and naturally available,
+        and delivers the highest power density of approximately 15 mW/cm2, as compared to various other energy
+        harvesting techniques [9]. Limitations of solar energy as EH source include (i) uncontrollability, (ii)
+        unavailability during night, and (iii) effects on weather, season, etc. However, these limitations can be
+        effectively mitigated by utilizing the predictability of such effects. As light, or sunlight is one of the
+        primary requirements for plant growth, utilizing solar energy to both recharge and power our IoT system is a
+        logical choice.
+
+        Along with selecting a viable energy source, we also need to harvest energy in a way that suits our system’s
+        needs and components. Primarily, we should focus on the amount of energy generated and consumed. In case of
+        sources such as solar energy which generates a high-output voltage, far more than the requirement of our
+        low-power IoT system, it is wise to store energy for later use, for eg. during night, or when availability of
+        solar energy is dampened due to weather or seasonal variations. Due to its nature as an uncontrollable but
+        predictable resource, solar energy lends itself to a harvest-store-use model for uninterrupted operation [12],
+        [13]. Several approaches have been explored to maximize data transmission rate [14], [15] through optimal
+        scheduling schemes for power management. In [7], the authors have designed a solar-powered environmental BLE
+        beacon, that allowed stand-alone operation, with the solar cells being capable of charging the accumulator
+        within a single day with good weather. A similar approach replacing solar with RF showed lesser amounts of
+        scavenged energy.
+      </p>
+      <h3>
+        Setup/System Outline</h3>
+      <p> Various researchers have explored the design of IoT-based smart plant monitoring systems. Judika et al.
+        investigated the potential benefits of such a system in monitoring Chili plants in Indonesia [2]. Their system
+        is capable of monitoring the moisture, pH, and salinity of the soil and autonomously adjusting these
+        parameters
+        using water, pH up/down liquid, and AB mix, respectively [2]. While the system functions effectively in the
+        field, it is specifically designed to cater to a single type of plant. Kush et al. endeavored to broaden the
+        scope of plant monitoring by introducing a smart pot [1]. However, this approach is marred by two significant
+        flaws: users are required to replace their existing pots with smart pots, and the pot relies on a user to
+        regularly charge its battery. Antti et al. devised an AI system capable of monitoring plant health, yet it
+        relies on human intervention for plant care based on the interpreted data [3]. The limitations of previous
+        research underscore the importance of developing a self-sufficient autonomous plant monitoring system.
+      </p>
+      <h3>
+        Cloud computing </h3>
+      <p>
+        Cloud connectivity constitutes a crucial aspect of plant monitoring systems. Wi-Fi stands as the predominant
+        interface for network connectivity [2,3]. Nevertheless, Bluetooth, particularly its variant Bluetooth Low
+        Energy
+        (BLE), consumes less power and serves as an optimal choice for connecting to smartphones [4]. Ethernet, as a
+        wired connectivity option, offers a reliable connection [1]. The communication of plant health data to users
+        commonly occurs through smartphone apps [1]. Alternatively, websites or web apps, which are platform-agnostic,
+        present another viable option [2, 3].
+      </p>
+      <h3>
+        Irrigation Techniques
+      </h3>
+      <p>
+        Effective irrigation techniques are essential for maintaining plants alive, as precise delivery of water to
+        the
+        roots profoundly impacts their overall health and development. Some irrigation systems designed for efficiency
+        and minimal human intervention have been designed in the past. Judika et al. discuss automated sprinkler and
+        monitoring systems specifically designed for chili plants in urban settings. These systems use a combination
+        of
+        soil moisture sensors and Arduino controllers to regulate watering based on the soil's moisture content.
+        Sensor fusion
+        Sensor fusion is an essential component for plant monitoring. It is necessary to integrate data from various
+        sources such as moisture, humidity, light and temperature to ensure precise soil humidity management and
+        optimal
+        plant health. Previous research by Misra et al. offers examples into how sensor fusion is able to enhance IoT
+        functionality by combining multiple sensor inputs to achieve more accurate, robust and reliable models of the
+        physical environment. Applying sensor fusion is important, as the results of efficient sensor fusion are
+        almost
+        always better than those obtained from the interpretation of data from individual sensors [5]. However, there
+        are many challenges to implementing sensor fusion within the constraints of IoT. Handling voluminous and
+        heterogeneous data efficiently, ensuring real-time processing and maintaining scalability, as discussed by
+        Krishnamurthi et al. Additionally, research focusing specifically on sensor fusion for houseplant environments
+        remains scarce, underscoring a significant gap in current studies.
+      </p>
+    </div>
+    </section>
+
+    <section>
+      <h3>
+        References
+      </h3>
+      <div class="references">
+        <ol>
+          <li>Rawal, Kush, and Goldie Gabrani. "IoT based computing to monitor indoor plants by using smart pot."
+            Proceedings of the International Conference on Innovative Computing & Communications (ICICC). 2020.</li>
+          <li>Gultom, Judika Herianto, et al. "Smart IoT water sprinkle and monitoring system for chili plant."
+            2017 International Conference on Electrical Engineering and Computer Science (ICECOS). IEEE, 2017.</li>
+          <li>Nurminen, Antti, and Avleen Malhi. "Green Thumb Engineering: Artificial intelligence for managing IoT
+            enabled houseplants." 2020 IEEE Global Conference on Artificial Intelligence and Internet of Things
+            (GCAIoT).
+            IEEE, 2020.</li>
+          <li>Ayaz, Muhammad, et al. "Internet-of-Things (IoT)-based smart agriculture: Toward making the fields
+            talk."
+            IEEE access 7 (2019): 129551-129583.</li>
+          <li>N. N. Misra, Y. Dixit, A. Al-Mallahi, M. S. Bhullar, R. Upadhyay and A. Martynenko, "IoT, Big Data,
+            and
+            Artificial Intelligence in Agriculture and Food Industry," in IEEE Internet of Things Journal, vol. 9,
+            no.
+            9,
+            pp. 6305-6324, 1 May, 2022, doi: 10.1109/JIOT.2020.2998584.</li>
+          <li>Krishnamurthi, R.; Kumar, A.; Gopinathan, D.; Nayyar, A.; Qureshi, B. An Overview of IoT Sensor Data
+            Processing, Fusion, and Analysis Techniques. Sensors 2020, 20, 6076. <a
+              href="https://doi.org/10.3390/s20216076">https://doi.org/10.3390/s20216076</a></li>
+          <li>Sanislav, Teodora, et al. "Energy harvesting techniques for internet of things (IoT)." IEEE Access 9
+            (2021): 39530-39549.</li>
+          <li>S. Sudevalayam and P. Kulkarni, Energy harvesting sensor nodes: Survey and implications, IEEE Commun.
+            Surveys Tuts., vol. 13, no. 3, pp. 443461, 3rd Quart., 2011.</li>
+          <li>C. Wang, J. Li, Y. Yang, and F. Ye, Combining solar energy harvesting with wireless charging for
+            hybrid
+            wireless sensor networks, IEEE Trans. Mobile Comput., vol. 17, no. 3, pp. 560576, Mar. 2018.</li>
+          <li>Sinha, Bam Bahadur, and R. Dhanalakshmi. "Recent advancements and challenges of Internet of Things in
+            smart agriculture: A survey." Future Generation Computer Systems 126 (2022): 169-184.</li>
+          <li>Zeadally, Sherali & Shaikh, Faisal & Talpur, Anum & Sheng, Quan. (2020). Design architectures for
+            energy
+            harvesting in the Internet of Things. Renewable and Sustainable Energy Reviews. 128. 109901.
+            <a href="https://doi.org/10.1016/j.rser.2020.109901">10.1016/j.rser.2020.109901</a>.
+          </li>
+          <li>J. Gruetter. (Oct. 2010). Solar Energy Harvesting—Low Power in a Compact Footprint. Accessed: Jan. 3,
+            2021. <a href="https://www.powersystemsdesign.com/articles/solar-energy-harvesting/22/5742">Online</a>.
+          </li>
+          <li>Y. Wu, C. Li, Z. Tian, and J. Sun, ‘‘Solar-driven integrated energy systems: State of the art and
+            challenges,’’ J. Power Sources, vol. 478, Dec. 2020, Art. no. 228762.</li>
+          <li>S. Reddy and C. R. Murthy, ‘‘Profile-based load scheduling in wireless energy harvesting sensors for
+            data
+            rate maximization,’’ in Proc. IEEE Int. Conf. Commun., Cape Town, South Africa, May 2010, pp. 1–5, doi:
+            10.1109/ICC.2010.5502464.</li>
+          <li>S. Reddy and C. R. Murthy, ‘‘Dual-stage power management algorithms for energy harvesting sensors,’’
+            IEEE
+            Trans. Wireless Commun., vol. 11, no. 4, pp. 1434–1445, Apr. 2012, doi: 10.1109/TWC.2012.032812.110623.
+          </li>
+          <li>Oregon State University Extension Service. (n.d.). Environmental factors affecting plant growth. Retrieved
+            May 6, 2024, from
+            https://extension.oregonstate.edu/gardening/techniques/environmental-factors-affecting-plant-growth </li>
+        </ol>
+      </div>
+    </section>
+
+      </div>
+  <footer>
+    <p>© 2024 Green Guardian. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>
