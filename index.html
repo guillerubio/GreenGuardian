@@ -19,7 +19,6 @@
     <nav class="header-buttons">
       <button onclick="location.href='team.html'">Team</button>
       <button onclick="window.location.href='https://github.com/DivyaSanjay/Green_Guardian'">GitHub</button>
-      <button onclick="location.href='related_work.html'">Related Work</button>
     </nav>
   </div>
 
@@ -27,25 +26,61 @@
     <section class="updates">
       <h2>Recent Updates</h2>
       <div class="recent-update">
-        <p><strong>May 19, 2024:</strong> Energy harvesting circuit added to prototype, test successful.
-        <p><strong>May 17, 2024:</strong> Code update for Wifi connection to Arduino, time synchronization, and entering low power mode.</p>
-        <p><strong>May 13, 2024:</strong> Code update for reading sensor data of water level of actuator.
-        <p><strong>May 12, 2024:</strong> Code update for reading sensor data (Temperature, Humidity, Ambient Light, Soil Moisture).</p>
-        <p><strong>May 8, 2024:</strong> Problem definition, product survey insights and technical approach added. Temperature and humidity sensor calibrated. Initial design of alogrithms.
-      </div>
-      <div class="recent-update">
-        <p><strong>April 24, 2024:</strong> Updated timeline and milestones. Created related work section.
-      </div>
-      <div class="recent-update">
-        <p><strong>April 20, 2024:</strong> Created product interest survey, please answer <a href="https://forms.gle/btYYptg8Jcv3hJHd6
-          ">here!</a></p>
+        <p><strong>May 19, 2024:</astrong> Energy harvesting circuit added to prototype, test successful.</p>
+        <p><strong>May 17, 2024:</strong> Code update for Wifi connection to Arduino, time synchronization, and entering
+          low power mode.</p>
+        <p><strong>May 13, 2024:</strong> Code update for reading sensor data of water level of actuator.</p>
+        <p><strong>May 12, 2024:</strong> Code update for reading sensor data (Temperature, Humidity, Ambient Light,
+          Soil Moisture).</p>
+        <p><strong>May 8, 2024:</strong> Problem definition, product survey insights and technical approach added.
+          Temperature and humidity sensor calibrated. Initial design of algorithms.</p>
+
+
+        <p><strong>April 24, 2024:</strong> Updated timeline and milestones. Created related work section.</p>
+
+        <p><strong>April 20, 2024:</strong> Created product interest survey, please answer <a
+            href="https://forms.gle/btYYptg8Jcv3hJHd6">here!</a></p>
       </div>
     </section>
   </div>
 
+  <div class="container  second">
+    <h2>Table of Contents</h2>
+    <nav>
+      <div class="toc-group">
+        <h3>Introduction</h3>
+        <ul class="toc-buttons">
+          <li><a class="toc-button" href="#abstract">Abstract</a></li>
+          <li><a class="toc-button" href="#problem-definition">Problem Definition</a></li>
+          <li><a class="toc-button" href="#milestones">Milestones</a></li>
+          <li><a class="toc-button" href="#timeline">Timeline</a></li>
+        </ul>
+      </div>
+      <div class="toc-group">
+        <h3>Technical Details</h3>
+        <ul class="toc-buttons">
+          <li><a class="toc-button" href="#technical-approach">Technical Approach</a></li>
+          <li><a class="toc-button" href="#product-survey">Product Survey</a></li>
+          <li><a class="toc-button" href="#sensor-selection">Sensor Selection, Fusion and Calibration</a></li>
+          <li><a class="toc-button" href="#plant-care">Plant Care through Actuation</a></li>
+          <li><a class="toc-button" href="#energy-autonomy">Energy Autonomy through Energy Harvesting</a></li>
+        </ul>
+      </div>
+      <div class="toc-group">
+        <h3>Additional Information</h3>
+        <ul class="toc-buttons">
+          <li><a class="toc-button" href="#related-work">Related Work</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+
+
+
 
   <div class="container second">
-    <section>
+    <section id="abstract">
       <h2 style="margin-top: 0px;">Abstract</h2>
       <p>The <strong>Green Guardian</strong> project addresses substantial economic losses in the houseplant industry,
         where a significant portion of plants perish annually due to neglect. This <strong>IoT device</strong>
@@ -62,7 +97,7 @@
       </p>
     </section>
 
-    <section>
+    <section id="problem-definition">
       <h2>Problem Definition</h2>
       <p>Americans invest approximately $16 billion annually in houseplants. Sadly, it is estimated that nearly half of
         these plants die due to improper care, which indicates a substantial gap in the consumer knowledge or available
@@ -72,28 +107,24 @@
       </p>
     </section>
 
-    <section>
+    <section id="milestones">
       <h2>Milestones</h2>
       <ul class="milestones">
         <li class="completed">Conducting Product Interest Survey to at Least 100 Individuals to Gauge the Viability of
           the Concept</li>
         <li class="completed">Researching Design and Implementation - Acquiring Optimal Hardware Components (Sensors,
-          etc.)
-        </li>
+          etc.)</li>
         <li class="completed">Investigating Relevant Software, Code and Data for Decision Models</li>
-        <li style="color: orange;">Fabricating a 3D Printed structure Body and Water Valve - Asemble First prototype
+        <li style="color: orange;">Fabricating a 3D Printed structure Body and Water Valve - Assemble First prototype
         </li>
         <li>Setting Up Experimental Environments: One with Our Integrated System and Another Under Natural Conditions
-          (Without IoT Interaction)
-        </li>
+          (Without IoT Interaction)</li>
         <li>Conduct Experiments and Validate Idea</li>
         <li>Create and Validate Novel IoT Approach to Automating Household Plant Care</li>
-
       </ul>
     </section>
 
-
-    <section>
+    <section id="timeline">
       <h2>Timeline</h2>
       <div class="tl">
         <p><strong>Week 1:</strong> Project kickoff, initial research, and component ordering are scheduled.</p>
@@ -105,12 +136,7 @@
       </div>
     </section>
 
-
-    </div>
-
-    </section>
-
-    <section>
+    <section id="technical-approach">
       <h2>Technical Approach: Details</h2>
       <p>The project proposes the creation of the Green Guardian, an IoT device designed to simplify plant care to a
         near-autonomous level. This device will manage watering schedules based on soil humidity data it collects,
@@ -119,21 +145,16 @@
         <img src="assets/Implementation/imp1.webp" style="width: 80%; height: auto;" alt="Implementation Diagram"
           class="implementation-diagram">
       </div>
-
-
       <p>Key components of the device include sensors for soil moisture, ambient light, and temperature, a water
         delivery system, and a power management unit featuring solar energy harvesting. This integrated system ensures
         that plants receive optimal care without requiring constant human intervention.</p>
-
-
     </section>
 
-    <section>
+    <section id="product-survey">
       <h2>Product Survey - Preliminary Data</h2>
       <p>A survey was conducted with 119 participants to gauge potential user interest in the Green Guardian. Questions
         aimed to assess how often individuals interact with their plants and their interest in a self-sustaining plant
         care system.</p>
-
       <p>The survey results for the Green Guardian product reveal promising insights into the market's readiness and
         potential interest in an autonomous plant care solution. A majority of respondents interact with their plants
         frequently (daily or several times a week), indicating an existing commitment to plant care that the Green
@@ -151,26 +172,21 @@
         <img src="/assets/survey/5.webp" alt="Survey response chart5">
         <img src="/assets/survey/6.webp" alt="Survey response chart6">
       </div>
-
-
     </section>
 
-    <section>
-      <h2> Sensor Selection, Fusion and Calibration</h2>
-      <p>Environmental factors that affect plant growth and include light, temperature, water, humidity and
-        nutrition.​[16]
+    <section id="sensor-selection">
+      <h2>Sensor Selection, Fusion and Calibration</h2>
+      <p>Environmental factors that affect plant growth and include light, temperature, water, humidity and nutrition.
         The first four parameters: light, temperature, humidity and soil moisture (through watering) are readily
         measurable using cost-effective off-the-shelf sensors, which we procured. Nutrition is tougher to sense and
-        requires more expensive approaches such as spectroscopy, wifi signal, pH, ion-selective electrodes.​ Since our
+        requires more expensive approaches such as spectroscopy, wifi signal, pH, ion-selective electrodes. Since our
         design goals require an affordable solution, we decided to forgo the pH sensor (cheapest option would cost $70).
       </p>
       <p>As we do not want affordability of the system to compromise the quality, we needed to calibrate the sensors so
         that the data they produce is reliable. We began with calibrating our DHT11 temperature and humidity sensor. The
         below method involved taking initial readings from the sensor and comparing it to the temperature and humidity
         values as measured by an iPhone. We then calibrated the sensor readings to the correct value through one-stop
-        calibration.
-        The sensor calibration code is available on our github repository.
-      </p>
+        calibration. The sensor calibration code is available on our github repository.</p>
       <div class="image-grid">
         <img src="/assets/sensor_calibration/1.webp">
         <img src="/assets/sensor_calibration/2.webp" style="width:50%; height: 70%;">
@@ -178,35 +194,38 @@
       </div>
     </section>
 
-    <section>
+    <section id="plant-care">
       <h2>Plant Care through Actuation</h2>
       <p>Our goal is to take care of a plant with minimal or no human effort. To this end, we decided to design an
-        actuation
-        system that would water the plant as and when directed by a decision making model. This decision making model is
-        designed
-        by utilizing the plant specific care instructions, along with the sensor data for soil moisutre and ambient
-        light.</p>
-      <p>We define some terms for our system:
-        <li>Environment: Plant + data collected by sensors​</li>
+        actuation system that would water the plant as and when directed by a decision making model. This decision
+        making model is designed by utilizing the plant specific care instructions, along with the sensor data for soil
+        moisture and ambient light.</p>
+      <p>We define some terms for our system:</p>
+      <ul>
+        <li>Environment: Plant + data collected by sensors</li>
         <li>State: Current conditions of the plant defined by data collected from soil moisture, temperature, humidity,
-          and ambient light sensors.​</li>
+          and ambient light sensors.</li>
         <li>Agent: Arduino Controller</li>
-        <li>Action: Water the plant / Do not water the plant​</li>
-      </p>
+        <li>Action: Water the plant / Do not water the plant</li>
+      </ul>
 
-      <h3> Initial Approach: Rule Based Decision Making</h3>
-      <li> Use thresholds based on plant specific care instructions: watering frequency, light requirements, other
-        conditions (e.g., water after soil is completely dried out).</li>
-      <li> Do not water plants at night.​ Because of absence of sunlight, leaves do not dry off and are prone to fungal
-        infestations.</li>
-      <li> Water specific amount corresponding to plant care instructions.​</li>
+      <h3>Initial Approach: Rule Based Decision Making</h3>
+      <ul>
+        <li>Use thresholds based on plant specific care instructions: watering frequency, light requirements, other
+          conditions (e.g., water after soil is completely dried out).</li>
+        <li>Do not water plants at night. Because of absence of sunlight, leaves do not dry off and are prone to fungal
+          infestations.</li>
+        <li>Water specific amount corresponding to plant care instructions.</li>
+      </ul>
 
-      <h3> Advanced Approach: Actuation-with-Learning</h3>
-      <li>Develop a comprehensive dataset from plant sensor data collected over several days.​</li>
-      <li>Establish a correlation between the plant's condition and actuation actions, focusing on watering frequency
-        and volume.​</li>
-      <li>Utilize this "learning" approach to create a plant-specific model.​</li>
-      <li>Enhance decision-making processes by optimizing factors such as thresholds and watering parameters.​</li>
+      <h3>Advanced Approach: Actuation-with-Learning</h3>
+      <ul>
+        <li>Develop a comprehensive dataset from plant sensor data collected over several days.</li>
+        <li>Establish a correlation between the plant's condition and actuation actions, focusing on watering frequency
+          and volume.</li>
+        <li>Utilize this "learning" approach to create a plant-specific model.</li>
+        <li>Enhance decision-making processes by optimizing factors such as thresholds and watering parameters.</li>
+      </ul>
       <div class="image-grid">
         <figure><img src="/assets/Actuation/Actuation_1.webp">
           <figcaption>Rule Based Actuation</figcaption>
@@ -215,34 +234,180 @@
           <figcaption>Actuation with Learning</figcaption>
         </figure>
       </div>
-
     </section>
-    <section>
-      <h2> Energy Autonomy through Energy Harvesting</h2>
-      Our system goals are self-sufficiency, long lifespan, and energy efficiency. However, the system components are
-      battery powered and will get depleted over time.​ Therefore, we
-      design an energy harvesting system to power GreenGuardian as a stand-alone, long-term solution.
-      <li>Perform energy profiling to realize energy consumption.​</li>
-      <li>Harvest Solar Energy to power system.​</li>
-      <li>Apply optimization techniques.​</li>
+
+    <section id="energy-autonomy">
+      <h2>Energy Autonomy through Energy Harvesting</h2>
+      <p>Our system goals are self-sufficiency, long lifespan, and energy efficiency. However, the system components are
+        battery powered and will get depleted over time. Therefore, we design an energy harvesting system to power
+        GreenGuardian as a stand-alone, long-term solution.</p>
+      <ul>
+        <li>Perform energy profiling to realize energy consumption.</li>
+        <li>Harvest Solar Energy to power system.</li>
+        <li>Apply optimization techniques.</li>
+      </ul>
       <div class="center">
         <img src="/assets/Energy_Harvesting.webp" style="width: 80%" alt="Energy harvesting component specifications">
       </div>
 
       <h3>Optimization Techniques</h3>
-      <li>Have <b>separate power sources</b> for sensing module and control module.​
-        - Gives software control over sensor activation and operation.</li>
-      <li>Sensor data is <b>not highly variable</b>, so we are not sensing continuously​. Sensors are turned off and
-        Arduino is in low-power mode for majority of the time.​</li>
-      <li><b>Adaptive Duty Cycling</b> ​- Battery is charged on good weather days, and sensor activity is lessened on
-        bad weather days (Low Battery Level + Ambient Light below threshold)​.
-        This enables us to adapt duty cycling to battery power and availability of ambient light.​</li>
+      <ul>
+        <li>Have <b>separate power sources</b> for sensing module and control module.
+          - Gives software control over sensor activation and operation.</li>
+        <li>Sensor data is <b>not highly variable</b>, so we are not sensing continuously. Sensors are turned off and
+          Arduino is in low-power mode for majority of the time.</li>
+        <li><b>Adaptive Duty Cycling</b> - Battery is charged on good weather days, and sensor activity is lessened on
+          bad weather days (Low Battery Level + Ambient Light below threshold). This enables us to adapt duty cycling to
+          battery power and availability of ambient light.</li>
+      </ul>
     </section>
 
+    <section id="related-work">
+      <h2 style="margin-top: 0px;">Related Work</h2>
+      <p>Various researchers have explored the design of IoT-based smart plant monitoring systems. Judika et al.
+        investigated the potential benefits of such a system in monitoring Chili plants in Indonesia [2]. Their system
+        is capable of monitoring the moisture, pH, and salinity of the soil and autonomously adjusting these parameters
+        using water, pH up/down liquid, and AB mix, respectively [2]. While the system functions effectively in the
+        field, it is specifically designed to cater to a single type of plant. Kush et al. endeavored to broaden the
+        scope of plant monitoring by introducing a smart pot [1]. However, this approach is marred by two significant
+        flaws: users are required to replace their existing pots with smart pots, and the pot relies on a user to
+        regularly charge its battery. Antti et al. devised an AI system capable of monitoring plant health, yet it
+        relies on human intervention for plant care based on the interpreted data [3]. The limitations of previous
+        research underscore the importance of developing a self-sufficient autonomous plant monitoring system.</p>
+      <div class="related-body">
+        <h3>Sensor Modalities</h3>
+        <p>For monitoring plant health, there are various features that need to be observed and maintained, such as soil
+          health through pH and moisture content sensing, amount of ambient light and humidity. These parameters can be
+          conveniently calculated using IoT sensors, and are paramount for effective monitoring. The collected data
+          assists in making decisions about irrigation, soil nutrition, and determining which plant types to grow. The
+          pH sensor serves the purpose of monitoring the nutrient levels necessary for the growth of a plant [10]. The
+          soil moisture sensor functions to assess the moisture content within the soil, mitigating the risk of plant
+          desiccation due to inadequate watering practices [1,2]. Additionally, the monitoring of air temperature and
+          humidity, often facilitated by the DHT11 sensor, stands as another crucial aspect of plant monitoring systems
+          [1, 2, 10].</p>
+        <h3>Energy Harvesting</h3>
+        <p>Ideally, IoT systems should be self-sustainable and functional for a long period of time. Especially for our
+          approach to a self-contained plant monitoring system that requires minimal to no human interference, we would
+          like to ensure a longer network lifetime. With this is mind, using batteries as the primary or only power
+          source poses several challenges, as highlighted in [7]: (i) finite lifetime, (ii) depletion and leakage
+          issues, (iii) expensive maintenance and replacement costs, (iv) effects due to temperature, (v) impact of
+          battery chemicals on surrounding environment, (vi) problems in maintenance and replacement due to IoT systems
+          deployment in inaccessible or remote locations. Therefore, we have to come up with energy harvesting (EH)
+          techniques to provide secondary power sources or even replace batteries altogether. Work by T. Sanislav et al.
+          extensively investigates the major energy sources that can be used for EH and subsequent models for this
+          purpose, choosing either an immediate Harvest-Use or Harvest-Store-Use model [8].</p>
+
+        <p>The work by T. Sanislav evaluated a host of EH sources, encompassing ambient, human, organic, mechanical, and
+          hybrid sources. Criteria for evaluation included (i) technology, (ii) power density, (iii) controllability,
+          (iv) predictability, and (v) availability. Based on their findings, solar energy is easily and naturally
+          available, and delivers the highest power density of approximately 15 mW/cm2, as compared to various other
+          energy harvesting techniques [9]. Limitations of solar energy as EH source include (i) uncontrollability, (ii)
+          unavailability during night, and (iii) effects on weather, season, etc. However, these limitations can be
+          effectively mitigated by utilizing the predictability of such effects. As light, or sunlight is one of the
+          primary requirements for plant growth, utilizing solar energy to both recharge and power our IoT system is a
+          logical choice.</p>
+
+        <p>Along with selecting a viable energy source, we also need to harvest energy in a way that suits our system’s
+          needs and components. Primarily, we should focus on the amount of energy generated and consumed. In case of
+          sources such as solar energy which generates a high-output voltage, far more than the requirement of our
+          low-power IoT system, it is wise to store energy for later use, for eg. during night, or when availability of
+          solar energy is dampened due to weather or seasonal variations. Due to its nature as an uncontrollable but
+          predictable resource, solar energy lends itself to a harvest-store-use model for uninterrupted operation [12],
+          [13]. Several approaches have been explored to maximize data transmission rate [14], [15] through optimal
+          scheduling schemes for power management. In [7], the authors have designed a solar-powered environmental BLE
+          beacon, that allowed stand-alone operation, with the solar cells being capable of charging the accumulator
+          within a single day with good weather. A similar approach replacing solar with RF showed lesser amounts of
+          scavenged energy.</p>
+
+        <h3>Setup/System Outline</h3>
+        <p>Various researchers have explored the design of IoT-based smart plant monitoring systems. Judika et al.
+          investigated the potential benefits of such a system in monitoring Chili plants in Indonesia [2]. Their system
+          is capable of monitoring the moisture, pH, and salinity of the soil and autonomously adjusting these
+          parameters using water, pH up/down liquid, and AB mix, respectively [2]. While the system functions
+          effectively in the field, it is specifically designed to cater to a single type of plant. Kush et al.
+          endeavored to broaden the scope of plant monitoring by introducing a smart pot [1]. However, this approach is
+          marred by two significant flaws: users are required to replace their existing pots with smart pots, and the
+          pot relies on a user to regularly charge its battery. Antti et al. devised an AI system capable of monitoring
+          plant health, yet it relies on human intervention for plant care based on the interpreted data [3]. The
+          limitations of previous research underscore the importance of developing a self-sufficient autonomous plant
+          monitoring system.</p>
+        <h3>Cloud computing</h3>
+        <p>Cloud connectivity constitutes a crucial aspect of plant monitoring systems. Wi-Fi stands as the predominant
+          interface for network connectivity [2,3]. Nevertheless, Bluetooth, particularly its variant Bluetooth Low
+          Energy (BLE), consumes less power and serves as an optimal choice for connecting to smartphones [4]. Ethernet,
+          as a wired connectivity option, offers a reliable connection [1]. The communication of plant health data to
+          users commonly occurs through smartphone apps [1]. Alternatively, websites or web apps, which are
+          platform-agnostic, present another viable option [2, 3].</p>
+        <h3>Irrigation Techniques</h3>
+        <p>Effective irrigation techniques are essential for maintaining plants alive, as precise delivery of water to
+          the roots profoundly impacts their overall health and development. Some irrigation systems designed for
+          efficiency and minimal human intervention have been designed in the past. Judika et al. discuss automated
+          sprinkler and monitoring systems specifically designed for chili plants in urban settings. These systems use a
+          combination of soil moisture sensors and Arduino controllers to regulate watering based on the soil's moisture
+          content.</p>
+        <p>Sensor fusion is an essential component for plant monitoring. It is necessary to integrate data from various
+          sources such as moisture, humidity, light and temperature to ensure precise soil humidity management and
+          optimal plant health. Previous research by Misra et al. offers examples into how sensor fusion is able to
+          enhance IoT functionality by combining multiple sensor inputs to achieve more accurate, robust and reliable
+          models of the physical environment. Applying sensor fusion is important, as the results of efficient sensor
+          fusion are almost always better than those obtained from the interpretation of data from individual sensors
+          [5]. However, there are many challenges to implementing sensor fusion within the constraints of IoT. Handling
+          voluminous and heterogeneous data efficiently, ensuring real-time processing and maintaining scalability, as
+          discussed by Krishnamurthi et al. Additionally, research focusing specifically on sensor fusion for houseplant
+          environments remains scarce, underscoring a significant gap in current studies.</p>
+      </div>
+    </section>
+
+    <section>
+      <h3>References</h3>
+      <div class="references">
+        <ol>
+          <li>Rawal, Kush, and Goldie Gabrani. "IoT based computing to monitor indoor plants by using smart pot."
+            Proceedings of the International Conference on Innovative Computing & Communications (ICICC). 2020.</li>
+          <li>Gultom, Judika Herianto, et al. "Smart IoT water sprinkle and monitoring system for chili plant." 2017
+            International Conference on Electrical Engineering and Computer Science (ICECOS). IEEE, 2017.</li>
+          <li>Nurminen, Antti, and Avleen Malhi. "Green Thumb Engineering: Artificial intelligence for managing IoT
+            enabled houseplants." 2020 IEEE Global Conference on Artificial Intelligence and Internet of Things
+            (GCAIoT). IEEE, 2020.</li>
+          <li>Ayaz, Muhammad, et al. "Internet-of-Things (IoT)-based smart agriculture: Toward making the fields talk."
+            IEEE access 7 (2019): 129551-129583.</li>
+          <li>N. N. Misra, Y. Dixit, A. Al-Mallahi, M. S. Bhullar, R. Upadhyay and A. Martynenko, "IoT, Big Data, and
+            Artificial Intelligence in Agriculture and Food Industry," in IEEE Internet of Things Journal, vol. 9, no.
+            9, pp. 6305-6324, 1 May, 2022, doi: 10.1109/JIOT.2020.2998584.</li>
+          <li>Krishnamurthi, R.; Kumar, A.; Gopinathan, D.; Nayyar, A.; Qureshi, B. An Overview of IoT Sensor Data
+            Processing, Fusion, and Analysis Techniques. Sensors 2020, 20, 6076. <a
+              href="https://doi.org/10.3390/s20216076">https://doi.org/10.3390/s20216076</a></li>
+          <li>Sanislav, Teodora, et al. "Energy harvesting techniques for internet of things (IoT)." IEEE Access 9
+            (2021): 39530-39549.</li>
+          <li>S. Sudevalayam and P. Kulkarni, Energy harvesting sensor nodes: Survey and implications, IEEE Commun.
+            Surveys Tuts., vol. 13, no. 3, pp. 443461, 3rd Quart., 2011.</li>
+          <li>C. Wang, J. Li, Y. Yang, and F. Ye, Combining solar energy harvesting with wireless charging for hybrid
+            wireless sensor networks, IEEE Trans. Mobile Comput., vol. 17, no. 3, pp. 560576, Mar. 2018.</li>
+          <li>Sinha, Bam Bahadur, and R. Dhanalakshmi. "Recent advancements and challenges of Internet of Things in
+            smart agriculture: A survey." Future Generation Computer Systems 126 (2022): 169-184.</li>
+          <li>Zeadally, Sherali & Shaikh, Faisal & Talpur, Anum & Sheng, Quan. (2020). Design architectures for energy
+            harvesting in the Internet of Things. Renewable and Sustainable Energy Reviews. 128. 109901. <a
+              href="https://doi.org/10.1016/j.rser.2020.109901">10.1016/j.rser.2020.109901</a>.</li>
+          <li>J. Gruetter. (Oct. 2010). Solar Energy Harvesting—Low Power in a Compact Footprint. Accessed: Jan. 3,
+            2021. <a href="https://www.powersystemsdesign.com/articles/solar-energy-harvesting/22/5742">Online</a>.</li>
+          <li>Y. Wu, C. Li, Z. Tian, and J. Sun, ‘‘Solar-driven integrated energy systems: State of the art and
+            challenges,’’ J. Power Sources, vol. 478, Dec. 2020, Art. no. 228762.</li>
+          <li>S. Reddy and C. R. Murthy, ‘‘Profile-based load scheduling in wireless energy harvesting sensors for data
+            rate maximization,’’ in Proc. IEEE Int. Conf. Commun., Cape Town, South Africa, May 2010, pp. 1–5, doi:
+            10.1109/ICC.2010.5502464.</li>
+          <li>S. Reddy and C. R. Murthy, ‘‘Dual-stage power management algorithms for energy harvesting sensors,’’ IEEE
+            Trans. Wireless Commun., vol. 11, no. 4, pp. 1434–1445, Apr. 2012, doi: 10.1109/TWC.2012.032812.110623.</li>
+          <li>Oregon State University Extension Service. (n.d.). Environmental factors affecting plant growth. Retrieved
+            May 6, 2024, from
+            https://extension.oregonstate.edu/gardening/techniques/environmental-factors-affecting-plant-growth</li>
+        </ol>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2024 Green Guardian. All rights reserved.</p>
+    </footer>
   </div>
-  <footer>
-    <p>© 2024 Green Guardian. All rights reserved.</p>
-  </footer>
 </body>
 
 </html>
