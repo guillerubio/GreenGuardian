@@ -23,10 +23,11 @@
     </nav>
   </div>
 
-  <div class="container">
+  <div class="container first">
     <section class="updates">
       <h2>Recent Updates</h2>
       <div class="recent-update">
+        <p><strong>May 22, 2024:</strong> First prototype assembeled - All sensors and actuators functional</p>
         <p><strong>May 19, 2024:</strong> Energy harvesting circuit added to prototype, test successful.</p>
         <p><strong>May 17, 2024:</strong> Code update for Wifi connection to Arduino, time synchronization, and
           entering
@@ -65,9 +66,11 @@
           <li><a class="toc-button" href="#product-survey">Product Survey</a></li>
           <li><a class="toc-button" href="#sensor-selection">Sensor Selection, Fusion and Calibration</a></li>
           <li><a class="toc-button" href="#plant-care">Plant Care through Actuation</a></li>
+          <li><a class="toc-button" href="#actuation-unit">Actuation Unit</a></li>
           <li><a class="toc-button" href="#energy-autonomy">Energy Autonomy through Energy Harvesting</a></li>
         </ul>
       </div>
+
       <div class="toc-group">
         <h3>Additional Information</h3>
         <ul class="toc-buttons">
@@ -123,9 +126,10 @@
         <li class="completed">Researching Design and Implementation - Acquiring Optimal Hardware Components (Sensors,
           etc.)</li>
         <li class="completed">Investigating Relevant Software, Code and Data for Decision Models</li>
-        <li style="color: orange;">Fabricating a 3D Printed structure Body and Water Valve - Assemble First prototype
+        <li class="completed">Fabricating a 3D Printed structure Body and Water Valve - Assemble First prototype
         </li>
-        <li>Setting Up Experimental Environments: One with Our Integrated System and Another Under Natural Conditions
+        <li style="color: orange;">Setting Up Experimental Environments: One with Our Integrated System and Another
+          Under Natural Conditions
           (Without IoT Interaction)</li>
         <li>Conduct Experiments and Validate Idea</li>
         <li>Create and Validate Novel IoT Approach to Automating Household Plant Care</li>
@@ -158,6 +162,54 @@
         that plants receive optimal care without requiring constant human intervention.</p>
     </section>
 
+
+
+    <section id="sensor-selection">
+      <h2>Sensor Selection, Fusion and Calibration</h2>
+      <p>Environmental factors that affect plant growth and include light, temperature, water, humidity and nutrition.
+        The first four parameters: light, temperature, humidity and soil moisture (through watering) are readily
+        measurable using cost-effective off-the-shelf sensors, which we procured. Nutrition is tougher to sense and
+        requires more expensive approaches such as spectroscopy, wifi signal, pH, ion-selective electrodes. Since our
+        design goals require an affordable solution, we decided to forgo the pH sensor (cheapest option would cost
+        $70).
+      </p>
+      <p>As we do not want affordability of the system to compromise the quality, we needed to calibrate the sensors
+        so
+        that the data they produce is reliable. We began with calibrating our DHT11 temperature and humidity sensor.
+        The
+        below method involved taking initial readings from the sensor and comparing it to the temperature and humidity
+        values as measured by an iPhone. We then calibrated the sensor readings to the correct value through one-stop
+        calibration. The sensor calibration code is available on our github repository.</p>
+      <div class="image-grid">
+        <img src="/assets/sensor_calibration/1.webp">
+        <img src="/assets/sensor_calibration/2.webp" style="width:50%; height: 70%;">
+        <img src="/assets/sensor_calibration/3.webp">
+      </div>
+    </section>
+
+    <section id="actuation-unit">
+      <h2>Actuation Unit: Irrigation Technique</h2>
+      <p>For this project, the actuation unit needed to be energy-efficient, effective, and capable of conserving
+        resources while delivering water directly to the plant roots. Given the project constraints, we opted for a
+        servo-activated valve to utilize the potential energy of the water in the bottle. Drip irrigation is known to be
+        90% efficient in allowing plants to absorb the water applied, significantly reducing runoff and evaporation
+        (University of Rhode Island, n.d.). Consequently, we decided to fabricate our own drip irrigation system using
+        an irrigation dripper, a valve, and a servo motor to control the water flow. The servo motor is managed by an
+        Arduino, which is in turn regulated by the decision-making model. Below is a video demonstration of how our
+        system works.</p>
+
+      <div class="center">
+
+        <div class="vid">
+          <video width="100%" controls>
+            <source src="/assets/Actuation Unit/Bottle servo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+
+    </section>
+
     <section id="product-survey">
       <h2>Product Survey - Preliminary Data</h2>
       <p>A survey was conducted with 119 participants to gauge potential user interest in the Green Guardian.
@@ -182,29 +234,6 @@
         <img src="/assets/survey/4.webp" alt="Survey response chart4">
         <img src="/assets/survey/5.webp" alt="Survey response chart5">
         <img src="/assets/survey/6.webp" alt="Survey response chart6">
-      </div>
-    </section>
-
-    <section id="sensor-selection">
-      <h2>Sensor Selection, Fusion and Calibration</h2>
-      <p>Environmental factors that affect plant growth and include light, temperature, water, humidity and nutrition.
-        The first four parameters: light, temperature, humidity and soil moisture (through watering) are readily
-        measurable using cost-effective off-the-shelf sensors, which we procured. Nutrition is tougher to sense and
-        requires more expensive approaches such as spectroscopy, wifi signal, pH, ion-selective electrodes. Since our
-        design goals require an affordable solution, we decided to forgo the pH sensor (cheapest option would cost
-        $70).
-      </p>
-      <p>As we do not want affordability of the system to compromise the quality, we needed to calibrate the sensors
-        so
-        that the data they produce is reliable. We began with calibrating our DHT11 temperature and humidity sensor.
-        The
-        below method involved taking initial readings from the sensor and comparing it to the temperature and humidity
-        values as measured by an iPhone. We then calibrated the sensor readings to the correct value through one-stop
-        calibration. The sensor calibration code is available on our github repository.</p>
-      <div class="image-grid">
-        <img src="/assets/sensor_calibration/1.webp">
-        <img src="/assets/sensor_calibration/2.webp" style="width:50%; height: 70%;">
-        <img src="/assets/sensor_calibration/3.webp">
       </div>
     </section>
 
@@ -253,6 +282,8 @@
         </figure>
       </div>
     </section>
+
+
 
     <section id="energy-autonomy">
       <h2>Energy Autonomy through Energy Harvesting</h2>
@@ -450,14 +481,19 @@
             May 6, 2024, from <a
               href="https://extension.oregonstate.edu/gardening/techniques/environmental-factors-affecting-plant-growth">https://extension.oregonstate.edu/gardening/techniques/environmental-factors-affecting-plant-growth</a>
           </li>
+          <li>University of Rhode Island. (n.d.). Drip Irrigation. Retrieved May 23, 2024, from <a
+              href="https://web.uri.edu/safewater/protecting-water-quality-at-home/sustainable-landscaping/drip-irrigation/">https://web.uri.edu/safewater/protecting-water-quality-at-home/sustainable-landscaping/drip-irrigation/</a>
+          </li>
         </ol>
       </div>
     </section>
 
-    <footer>
-      <p>© 2024 Green Guardian. All rights reserved.</p>
-    </footer>
+
+
   </div>
+  <footer>
+    <p>© 2024 Green Guardian. All rights reserved.</p>
+  </footer>
 </body>
 
 </html>

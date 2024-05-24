@@ -63,6 +63,8 @@ figcaption {
 
 /* CONTAINER */
 
+
+
 .container {
   width: 80%;
   margin: 20px auto;
@@ -70,6 +72,16 @@ figcaption {
   padding: 30px 50px;
   background-color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+  .container {
+    width: 80%;
+    margin: 10px auto;
+    /* Ensures centering on small screens */
+    padding: 10px;
+  }
 }
 
 .related-body h3 {
@@ -246,6 +258,7 @@ h2 {
 
 section {
   margin-bottom: 40px;
+  scroll-margin-top: 120px;
 }
 
 h1,
@@ -621,4 +634,21 @@ a {
 
 html {
   scroll-behavior: smooth;
+}
+
+.vid {
+  width: 35%;
+  height: auto;
+}
+
+
+@media (max-width: 768px) {
+  .vid {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.first {
+  margin-top: 130px;
 }
