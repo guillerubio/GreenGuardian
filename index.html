@@ -48,23 +48,45 @@
   </div>
 
   <div class="container  second">
-    <h2>Table of Contents</h2>
+    <h2>Green Guardian Presentation</h2>
+    <div class="video-container">
+      <iframe width="560" height="315" src="https://youtu.be/YY4qJfTtrn0" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+
+
+  <div class="container  second">
+    <h2>Table of Contents - Project Details</h2>
     <nav>
+      <h3>Project Details</h3>
+      <div class="toc-group">
+        <ul class="toc-buttons">
+          <li><a class="toc-button" href="#milestones">Milestones</a></li>
+          <li><a class="toc-button" href="#timeline">Timeline</a></li>
+        </ul>
+      </div>
+
       <div class="toc-group">
         <h3>Introduction</h3>
         <ul class="toc-buttons">
           <li><a class="toc-button" href="#abstract">Abstract</a></li>
           <li><a class="toc-button" href="#problem-definition">Problem Definition</a></li>
-          <li><a class="toc-button" href="#milestones">Milestones</a></li>
-          <li><a class="toc-button" href="#timeline">Timeline</a></li>
+          <li><a class="toc-button" href="#motivation">Motivation</a></li>
+
         </ul>
       </div>
       <div class="toc-group">
-        <h3>Technical Details</h3>
+        <h3>Technical Approach</h3>
         <ul class="toc-buttons">
-          <li><a class="toc-button" href="#technical-approach">Technical Approach</a></li>
+          <li><a class="toc-button" href="#hardware">Hardware</a></li>
+          <li><a class="toc-button" href="#architecture">System Architecture</a></li>
+
+
+          <li><a class="toc-button" href="#sensor-calibration">Sensor Calibration</a></li>
+          <li><a class="toc-button" href="#energy-profiling">Energy Profiling</a></li>
           <li><a class="toc-button" href="#product-survey">Product Survey</a></li>
-          <li><a class="toc-button" href="#sensor-selection">Sensor Selection, Fusion and Calibration</a></li>
           <li><a class="toc-button" href="#plant-care">Plant Care through Actuation</a></li>
           <li><a class="toc-button" href="#actuation-unit">Actuation Unit</a></li>
           <li><a class="toc-button" href="#energy-autonomy">Energy Autonomy through Energy Harvesting</a></li>
@@ -78,45 +100,6 @@
         </ul>
       </div>
     </nav>
-  </div>
-
-
-
-
-
-  <div class="container second">
-    <section id="abstract">
-      <h2 style="margin-top: 0px;">Abstract</h2>
-      <p>The <strong>Green Guardian</strong> project addresses substantial economic losses in the houseplant industry,
-        where a significant portion of plants perish annually due to neglect. This <strong>IoT device</strong>
-        simplifies plant care to a near-autonomous level, focusing primarily on <strong>precise soil humidity
-          management</strong> through its integrated watering system. Once installed, Green Guardian monitors soil
-        moisture and <em>adjusts watering schedules accordingly</em>, ensuring plants receive exactly what they need
-        without risk of over or underwatering. It also monitors environmental factors such as light and temperature
-        and
-        advises owners when adjustments are needed to maintain optimal conditions. Powered by an
-        <strong>energy-harvesting system</strong>, the device minimizes its environmental footprint and operates
-        independently of external power sources. With its <strong>cloud-connected capabilities</strong>, Green
-        Guardian
-        offers users remote monitoring and minimal interaction, making it an ideal solution for ensuring plant health
-        with little to no effort. This device not only promises to extend the life of houseplants but also to
-        transform
-        plant care into a hassle-free, sustainable routine.
-      </p>
-    </section>
-
-    <section id="problem-definition">
-      <h2>Problem Definition</h2>
-      <p>Americans invest approximately $16 billion annually in houseplants. Sadly, it is estimated that nearly half
-        of
-        these plants die due to improper care, which indicates a substantial gap in the consumer knowledge or
-        available
-        technology aiding in plant maintenance.</p>
-      <p>This situation presents a significant opportunity for innovation in the home gardening industry, particularly
-        through the development of smart technologies that can reduce plant mortality rates and enhance user
-        experience.
-      </p>
-    </section>
 
     <section id="milestones">
       <h2>Milestones</h2>
@@ -128,11 +111,11 @@
         <li class="completed">Investigating Relevant Software, Code and Data for Decision Models</li>
         <li class="completed">Fabricating a 3D Printed structure Body and Water Valve - Assemble First prototype
         </li>
-        <li style="color: orange;">Setting Up Experimental Environments: One with Our Integrated System and Another
+        <li class="completed">Setting Up Experimental Environments: One with Our Integrated System and Another
           Under Natural Conditions
           (Without IoT Interaction)</li>
-        <li>Conduct Experiments and Validate Idea</li>
-        <li>Create and Validate Novel IoT Approach to Automating Household Plant Care</li>
+        <li class=" completed">Conduct Experiments and Validate Idea</li>
+        <li class="completed">Create and Validate Novel IoT Approach to Automating Household Plant Care</li>
       </ul>
     </section>
 
@@ -148,44 +131,138 @@
       </div>
     </section>
 
-    <section id="technical-approach">
-      <h2>Technical Approach: Details</h2>
-      <p>The project proposes the creation of the Green Guardian, an IoT device designed to simplify plant care to a
-        near-autonomous level. This device will manage watering schedules based on soil humidity data it collects,
-        adjusting water delivery to the specific needs of each plant.</p>
-      <div class="center">
-        <img src="assets/Implementation/imp1.webp" style="width: 80%; height: auto;" alt="Implementation Diagram"
-          class="implementation-diagram">
-      </div>
-      <p>Key components of the device include sensors for soil moisture, ambient light, and temperature, a water
-        delivery system, and a power management unit featuring solar energy harvesting. This integrated system ensures
-        that plants receive optimal care without requiring constant human intervention.</p>
-    </section>
+  </div>
 
 
 
-    <section id="sensor-selection">
-      <h2>Sensor Selection, Fusion and Calibration</h2>
-      <p>Environmental factors that affect plant growth and include light, temperature, water, humidity and nutrition.
-        The first four parameters: light, temperature, humidity and soil moisture (through watering) are readily
-        measurable using cost-effective off-the-shelf sensors, which we procured. Nutrition is tougher to sense and
-        requires more expensive approaches such as spectroscopy, wifi signal, pH, ion-selective electrodes. Since our
-        design goals require an affordable solution, we decided to forgo the pH sensor (cheapest option would cost
-        $70).
+
+
+  <div class="container second">
+    <section id="abstract">
+      <h2 style="margin-top: 0px;">Abstract</h2>
+      <p>The Green Guardian project aims to address economic and environmental losses in the houseplant industry due to
+        neglect. This IoT device simplifies plant care with near-autonomous soil moisture management and an integrated
+        watering system. It monitors key variables (light, soil moisture, humidity, temperature), adjusts watering
+        schedules, and indicates optimal plant placement. Powered by an energy-harvesting system, Green Guardian
+        minimizes environmental impact and operates independently of external power sources.
       </p>
-      <p>As we do not want affordability of the system to compromise the quality, we needed to calibrate the sensors
-        so
-        that the data they produce is reliable. We began with calibrating our DHT11 temperature and humidity sensor.
-        The
-        below method involved taking initial readings from the sensor and comparing it to the temperature and humidity
-        values as measured by an iPhone. We then calibrated the sensor readings to the correct value through one-stop
-        calibration. The sensor calibration code is available on our github repository.</p>
-      <div class="image-grid">
-        <img src="/assets/sensor_calibration/1.webp">
-        <img src="/assets/sensor_calibration/2.webp" style="width:50%; height: 70%;">
-        <img src="/assets/sensor_calibration/3.webp">
-      </div>
     </section>
+
+    <section id="problem-definition">
+      <h2>Problem Definition</h2>
+      <p>In the United States alone, consumers spend approximately billions annually on houseplants and related
+        accessories <a href="#ref2">[2]</a>. Despite this investment, around half of these plants die prematurely due to
+        neglect and improper care <a href="#ref1">[1]</a>. This not only results in financial losses but also
+        contributes to environmental waste, as valuable resources such as water, soil, and plant materials are
+        squandered. The primary issues include a lack of proper plant care knowledge, as many plant owners lack the
+        necessary expertise to maintain optimal conditions for their houseplants, leading to overwatering,
+        underwatering, insufficient light, and poor environmental conditions. Additionally, busy lifestyles often
+        prevent individuals from dedicating the necessary time and attention to their plants, resulting in neglect and
+        inconsistent care routines. Improper care practices also lead to the wasteful use of resources such as water and
+        fertilizers, which has broader environmental implications. Furthermore, the premature death of plants results in
+        discarded plant material, contributing to landfill waste and the unnecessary consumption of resources used in
+        plant production and distribution.</p>
+    </section>
+
+    <section id="motivation">
+      <h2>Motivation</h2>
+      <p>The motivation behind the Green Guardian project stems from the desire to address the significant economic and
+        environmental issues associated with houseplant care. Americans spend approximately billions annually on
+        houseplants <a href="#ref2">[2]</a>, yet around half of these plants die prematurely due to neglect and improper
+        care <a href="#ref1">[1]</a>. This not only results in financial losses but also leads to environmental waste,
+        as resources such as water, soil, and plant materials are squandered.</p>
+
+      <p>Green Guardian aims to mitigate these issues by providing an IoT-based solution that automates plant care,
+        ensuring optimal conditions for plant health with minimal human intervention. The project seeks to reduce plant
+        mortality, promote sustainable practices, and enhance the overall experience of plant ownership by using an edge
+        system capable of sensing, decision-making, and actuating. Additionally, we aim to collect data on individual
+        plants to address the current lack of detailed plant care information, which could be highly beneficial for
+        advancements in the agricultural and environmental fields.</p>
+    </section>
+
+
+
+
+
+    </section>
+
+    <section id="hardware">
+      <h2>Hardware</h2>
+      <p>The components and design used for this project focused on its constraints and requirements: energy efficiency,
+        plant care through sensing, decision-making, and actuation, and minimal user intervention.</p>
+
+      <h3 id="architecture">System Architecture and Component Specification</h3>
+      <p>The system, as seen in <a href="#fig1">Fig. 1</a>, is divided into four units: control, sensing, power
+        management, and actuation. All of the hardware used for this project was over-the-counter and specified in the
+        Components Used in the Project.</p>
+
+      <p>The control unit is centered around the Arduino UNO R4 WiFi [ABX00087], featuring the Renesas RA4M1 and
+        ESP32-S3 for Wi-Fi and Bluetooth connectivity. This microcontroller was chosen for its robust performance, ease
+        of use, extensive community support, network support, affordability, pins, and peripheral compatibility.
+        Additionally, we chose this Arduino model for its integrated LED matrix, which can serve as a notification
+        system for the user.</p>
+
+      <p>The sensing unit is made up of four sensors that allow measurement of five essential variables for plant care:
+        soil moisture, environment temperature, air humidity, light exposure, and remaining water in storage. We chose
+        these because "environmental factors that affect plant growth include light, temperature, water, humidity, and
+        nutrition" <a href="#ref3">[3]</a>. Measuring soil nutrition is still unaffordable and complex, so we based our
+        model on the other factors. The sensors we used were the lowest consuming and most affordable ones available in
+        our market.</p>
+
+      <p>The power management unit is composed of a solar controller, a battery, and a solar cell. We deemed solar
+        energy as the most effective energy harvesting method given the environmental factors needed for plants to
+        thrive and its ample energy collection ability. The 3.7V 1000mAh LiPo battery provides reliable energy storage,
+        ensuring continuous operation during low-light conditions.</p>
+
+      <p>Finally, the actuation unit is composed of a standard servo. The servo is connected to a valve that enables
+        drip irrigation. We chose this irrigation system for two reasons. First, it takes advantage of the potential
+        energy from storing water above the plants, allowing gravity to assist in water delivery. Second, drip
+        irrigation is 90% efficient in allowing plants to use the applied water, and it reduces runoff and evaporation
+        <a href="#ref4">[4]</a>, making this system highly suitable for our requirements.
+      </p>
+
+      <figure id="fig1" class="figure">
+        <img src="assets/Implementation/imp1.webp" alt="Implementation Diagram" class="implementation-diagram">
+        <figcaption>Fig. 1: Implementation Diagram</figcaption>
+      </figure>
+
+      <h3 id="sensor-calibration">Sensor Calibration</h3>
+      <p>To ensure our decision-making model had accurate data input, and given that the sensors involved in this
+        project could compromise accuracy for affordability, sensor calibration was necessary for all of them.</p>
+      <p>The moisture sensor is capacitive, returning arbitrary values that only had relative meaning in the context of
+        the data points it collected. Because of this, we had to create a function to map these arbitrary values to soil
+        moisture content percentages. To achieve this, we dried the soil in an oven until it reached a consistent
+        weight, indicating minimal levels of moisture, which allowed us to measure 0% soil moisture. After this, we
+        determined the field capacity (100% moisture content) by thoroughly watering the soil sample until it was
+        completely saturated and then letting it drain until consistent. You can see both of these samples in <a
+          href="#fig2">Fig. 2</a>. With these capacitive thresholds, we were able to map arbitrary values to actual
+        moisture percentages.</p>
+
+      <p>The rest of the sensors returned their values in International System units, so the only calibration needed was
+        accuracy-based. Our approach for them was to use one-point calibration. For example, we had to add an offset to
+        our humidity and temperature sensor values as they were inconsistent with other local, more accurate sensors.
+      </p>
+
+      <figure id="fig2" class="figure">
+        <img style="width:50%" src="assets/Implementation/imp2.webp" alt="Soil Moisture Calibration Samples"
+          class="implementation-diagram">
+        <figcaption>Fig. 2: Soil Moisture Calibration Samples</figcaption>
+
+        <h3 id="energy-profiling">Energy Profiling</h3>
+        <p>We need to understand how much the setup consumes to make decisions regarding energy conservation, sleep
+          time, and sensing times. For this, we used a multimeter to measure the energy consumption of our device in
+          different states. The measurements are as follows:</p>
+        <ul style="text-align: left;">
+          <li>In low power mode, the CPU consumes 140 mA.</li>
+          <li>In normal mode, the CPU consumes 160 mA.</li>
+          <li>When the CPU is sensing, it consumes 180 mA.</li>
+          <li>When the servo is active, it consumes 240 mA.</li>
+        </ul>
+
+
+
+    </section>
+
 
     <section id="actuation-unit">
       <h2>Actuation Unit: Irrigation Technique</h2>
@@ -436,56 +513,96 @@
       <h3>References</h3>
       <div class="references">
         <ol>
-          <li>Rawal, Kush, and Goldie Gabrani. "IoT based computing to monitor indoor plants by using smart pot."
-            Proceedings of the International Conference on Innovative Computing & Communications (ICICC). 2020.</li>
-          <li>Gultom, Judika Herianto, et al. "Smart IoT water sprinkle and monitoring system for chili plant." 2017
-            International Conference on Electrical Engineering and Computer Science (ICECOS). IEEE, 2017.</li>
-          <li>Nurminen, Antti, and Avleen Malhi. "Green Thumb Engineering: Artificial intelligence for managing IoT
-            enabled houseplants." 2020 IEEE Global Conference on Artificial Intelligence and Internet of Things
-            (GCAIoT). IEEE, 2020.</li>
-          <li>Ayaz, Muhammad, et al. "Internet-of-Things (IoT)-based smart agriculture: Toward making the fields
-            talk."
-            IEEE access 7 (2019): 129551-129583.</li>
-          <li>N. N. Misra, Y. Dixit, A. Al-Mallahi, M. S. Bhullar, R. Upadhyay and A. Martynenko, "IoT, Big Data, and
-            Artificial Intelligence in Agriculture and Food Industry," in IEEE Internet of Things Journal, vol. 9, no.
-            9, pp. 6305-6324, 1 May, 2022, doi: 10.1109/JIOT.2020.2998584.</li>
-          <li>Krishnamurthi, R.; Kumar, A.; Gopinathan, D.; Nayyar, A.; Qureshi, B. An Overview of IoT Sensor Data
-            Processing, Fusion, and Analysis Techniques. Sensors 2020, 20, 6076. <a
-              href="https://doi.org/10.3390/s20216076">https://doi.org/10.3390/s20216076</a></li>
-          <li>Sanislav, Teodora, et al. "Energy harvesting techniques for internet of things (IoT)." IEEE Access 9
-            (2021): 39530-39549.</li>
-          <li>S. Sudevalayam and P. Kulkarni, Energy harvesting sensor nodes: Survey and implications, IEEE Commun.
-            Surveys Tuts., vol. 13, no. 3, pp. 443461, 3rd Quart., 2011.</li>
-          <li>C. Wang, J. Li, Y. Yang, and F. Ye, Combining solar energy harvesting with wireless charging for hybrid
-            wireless sensor networks, IEEE Trans. Mobile Comput., vol. 17, no. 3, pp. 560576, Mar. 2018.</li>
-          <li>Sinha, Bam Bahadur, and R. Dhanalakshmi. "Recent advancements and challenges of Internet of Things in
-            smart agriculture: A survey." Future Generation Computer Systems 126 (2022): 169-184.</li>
-          <li>Zeadally, Sherali & Shaikh, Faisal & Talpur, Anum & Sheng, Quan. (2020). Design architectures for energy
-            harvesting in the Internet of Things. Renewable and Sustainable Energy Reviews. 128. 109901. <a
-              href="https://doi.org/10.1016/j.rser.2020.109901">10.1016/j.rser.2020.109901</a>.</li>
-          <li>J. Gruetter. (Oct. 2010). Solar Energy Harvesting—Low Power in a Compact Footprint. Accessed: Jan. 3,
-            2021. <a href="https://www.powersystemsdesign.com/articles/solar-energy-harvesting/22/5742">Online</a>.
+          <li id="ref1">A. Narishkin and M. Tejapaibul, “Americans spend billions on houseplants, only to kill half of
+            them” Business Insider, Mar. 8, 2022. [Online]. Available: <a
+              href="https://www.businessinsider.com/houseplant-industry-americans-billions-die-2022-3">https://www.businessinsider.com/houseplant-industry-americans-billions-die-2022-3</a>.
+            [Accessed: Jun. 2, 2024].</li>
+          <li id="ref2">National Gardening Association, “Houseplants boomed during the pandemic. Gen Z and millennials
+            say their popularity is here to stay,” 2022. [Online]. Available: <a
+              href="https://www.kunr.org/business-and-economy/2022-12-28/houseplants-boomed-during-pandemic-gen-z-millennials-say-popularity-stays-tiktok#graphic-2">https://www.kunr.org/business-and-economy/2022-12-28/houseplants-boomed-during-pandemic-gen-z-millennials-say-popularity-stays-tiktok#graphic-2</a>.
+            [Accessed: Jun. 2, 2024].</li>
+          <li id="ref3">Oregon State University Extension Service, ”Environmental Factors Affecting Plant Growth.”
+            [Online]. Available: <a
+              href="https://extension.oregonstate.edu/gardening/techniques/environmental-factors-affecting-plant-growth">https://extension.oregonstate.edu/gardening/techniques/environmental-factors-affecting-plant-growth</a>.
+            [Accessed: Jun. 2, 2024].</li>
+          <li id="ref4">University of Rhode Island, “Drip Irrigation.” [Online]. Available: <a
+              href="https://web.uri.edu/safewater/protecting-water-quality-at-home/sustainable-landscaping/drip-irrigation/">https://web.uri.edu/safewater/protecting-water-quality-at-home/sustainable-landscaping/drip-irrigation/</a>.
+            [Accessed: May. 7, 2024].</li>
+          <li id="ref5">D. Swainston, ”Is watering plants at night a good idea? Experts discuss why it could put plants
+            in danger,” Homes & Gardens, [Online]. Available: <a
+              href="https://www.homesandgardens.com/gardens/watering-plants-at-night">https://www.homesandgardens.com/gardens/watering-plants-at-night</a>.
+            [Accessed: May. 28, 2024].</li>
+          <li id="ref6">G. Chandler, ”What Temperature Is Too Hot for Basil: Optimal Growing Conditions Revealed,”
+            Evergreen Seeds, May 3, 2024. [Online]. Available: <a
+              href="https://www.evergreenseeds.com/what-temperature-is-too-hot-for-basil/">https://www.evergreenseeds.com/what-temperature-is-too-hot-for-basil/</a>.
+            [Accessed: 02-Jun-2024].</li>
+          <li id="ref7">D. H. Larsen, E. J. Woltering, C. C. S. Nicole, and L. F. M. Marcelis, ”Response of Basil Growth
+            and Morphology to Light Intensity and Spectrum in a Vertical Farm,” Horticulture and Product Physiology,
+            Dept. of Plant Sciences, Wageningen University & Research, Wageningen, Netherlands; Postharvest Technology,
+            Wageningen Food and Biobased Research, Wageningen University & Research, Wageningen, Netherlands; Signify,
+            Eindhoven, Netherlands, 2024.</li>
+          <li id="ref8">J. Krause, ”Unlock The Secrets To Growing The Perfect Basil: The Ideal Soil For Optimal
+            Results,” Shuncy, Apr. 25, 2023. [Online]. Available: <a
+              href="https://shuncy.com/article/unlock-the-secrets-to-growing-the-perfect-basil-the-ideal-soil-for-optimal-results">https://shuncy.com/article/unlock-the-secrets-to-growing-the-perfect-basil-the-ideal-soil-for-optimal-results</a>.
+            [Accessed: 02-Jun-2024].</li>
+          <li id="ref9">M. Glenn, ”How to Prune Basil AeroGarden: A Complete Guide for Maximum Harvests,” Expert
+            Pruning. [Online]. Available: <a
+              href="https://expertpruning.com/how-to-prune-basil-aerogarden/">https://expertpruning.com/how-to-prune-basil-aerogarden/</a>.
+            [Accessed: 02-Jun-2024].</li>
+          <li id="ref10">K. Rawal and G. Gabrani, ”IoT based computing to monitor indoor plants by using smart pot,” in
+            Proceedings of the International Conference on Innovative Computing & Communications (ICICC), 2020.</li>
+          <li id="ref11">J. H. Gultom, et al., ”Smart IoT water sprinkle and monitoring system for chili plant,” in 2017
+            International Conference on Electrical Engineering and Computer Science (ICECOS), IEEE, 2017.</li>
+          <li id="ref12">A. Nurminen and A. Malhi, ”Green Thumb Engineering: Artificial intelligence for managing IoT
+            enabled houseplants,” in 2020 IEEE Global Conference on Artificial Intelligence and Internet of Things
+            (GCAIoT), IEEE, 2020.</li>
+          <li id="ref13">M. Ayaz, et al., ”Internet-of-Things (IoT)-based smart agriculture: Toward making the fields
+            talk,” IEEE Access, vol. 7, pp. 129551-129583, 2019.</li>
+          <li id="ref14">N. N. Misra, Y. Dixit, A. Al-Mallahi, M. S. Bhullar, R. Upadhyay, and A. Martynenko, ”IoT, Big
+            Data, and Artificial Intelligence in Agriculture and Food Industry,” IEEE Internet of Things Journal, vol.
+            9, no. 9, pp. 6305-6324, May 2022, doi: <a
+              href="https://doi.org/10.1109/JIOT.2020.2998584">10.1109/JIOT.2020.2998584</a>.</li>
+          <li id="ref15">R. Krishnamurthi, A. Kumar, D. Gopinathan, A. Nayyar, and B. Qureshi, ”An Overview of IoT
+            Sensor Data Processing, Fusion, and Analysis Techniques,” Sensors, vol. 20, no. 6076, 2020. [Online].
+            Available: <a href="https://doi.org/10.3390/s20216076">https://doi.org/10.3390/s20216076</a>. [Accessed:
+            02-Jun-2024].</li>
+          <li id="ref16">T. Sanislav, et al., ”Energy harvesting techniques for internet of things (IoT),” IEEE Access,
+            vol. 9, pp. 39530-39549, 2021.</li>
+          <li id="ref17">S. Sudevalayam and P. Kulkarni, ”Energy harvesting sensor nodes: Survey and implications,” IEEE
+            Commun. Surveys Tuts., vol. 13, no. 3, pp. 443-461, 3rd Quart., 2011.</li>
+          <li id="ref18">C. Wang, J. Li, Y. Yang, and F. Ye, ”Combining solar energy harvesting with wireless charging
+            for hybrid wireless sensor networks,” IEEE Trans. Mobile Comput., vol. 17, no. 3, pp. 560-576, Mar. 2018.
           </li>
-          <li>Y. Wu, C. Li, Z. Tian, and J. Sun, ‘‘Solar-driven integrated energy systems: State of the art and
-            challenges,’’ J. Power Sources, vol. 478, Dec. 2020, Art. no. 228762.</li>
-          <li>S. Reddy and C. R. Murthy, ‘‘Profile-based load scheduling in wireless energy harvesting sensors for
-            data
-            rate maximization,’’ in Proc. IEEE Int. Conf. Commun., Cape Town, South Africa, May 2010, pp. 1–5, doi:
-            10.1109/ICC.2010.5502464.</li>
-          <li>S. Reddy and C. R. Murthy, ‘‘Dual-stage power management algorithms for energy harvesting sensors,’’
-            IEEE
-            Trans. Wireless Commun., vol. 11, no. 4, pp. 1434–1445, Apr. 2012, doi: 10.1109/TWC.2012.032812.110623.
-          </li>
-          <li>Oregon State University Extension Service. (n.d.). Environmental factors affecting plant growth.
-            Retrieved
-            May 6, 2024, from <a
-              href="https://extension.oregonstate.edu/gardening/techniques/environmental-factors-affecting-plant-growth">https://extension.oregonstate.edu/gardening/techniques/environmental-factors-affecting-plant-growth</a>
-          </li>
-          <li>University of Rhode Island. (n.d.). Drip Irrigation. Retrieved May 23, 2024, from <a
-              href="https://web.uri.edu/safewater/protecting-water-quality-at-home/sustainable-landscaping/drip-irrigation/">https://web.uri.edu/safewater/protecting-water-quality-at-home/sustainable-landscaping/drip-irrigation/</a>
-          </li>
+          <li id="ref19">B. B. Sinha and R. Dhanalakshmi, ”Recent advancements and challenges of Internet of Things in
+            smart agriculture: A survey,” Future Generation Computer Systems, vol. 126, pp. 169-184, 2022.</li>
+          <li id="ref20">S. Zeadally, F. Shaikh, A. Talpur, and Q. Sheng, ”Design architectures for energy harvesting in
+            the Internet of Things,” Renewable and Sustainable Energy Reviews, vol. 128, 109901, 2020. [Online].
+            Available: <a
+              href="https://doi.org/10.1016/j.rser.2020.109901">https://doi.org/10.1016/j.rser.2020.109901</a>.
+            [Accessed: 02-Jun-2024].</li>
+          <li id="ref21">J. Gruetter, ”Solar Energy Harvesting—Low Power in a Compact Footprint,” Power Systems Design,
+            Oct. 2010. [Online]. Available: <a
+              href="https://www.powersystemsdesign.com/articles/solar-energy-harvesting/22/5742">https://www.powersystemsdesign.com/articles/solar-energy-harvesting/22/5742</a>.
+            [Accessed: 03-Jan-2021].</li>
+          <li id="ref22">Y. Wu, C. Li, Z. Tian, and J. Sun, ”Solar-driven integrated energy systems: State of the art
+            and challenges,” J. Power Sources, vol. 478, Dec. 2020, Art. no. 228762.</li>
+          <li id="ref23">S. Reddy and C. R. Murthy, ”Profile-based load scheduling in wireless energy harvesting sensors
+            for data rate maximization,” in Proc. IEEE Int. Conf. Commun., Cape Town, South Africa, May 2010, pp. 1-5,
+            doi: <a href="https://doi.org/10.1109/ICC.2010.5502464">10.1109/ICC.2010.5502464</a>.</li>
+          <li id="ref24">S. Reddy and C. R. Murthy, ”Dual-stage power management algorithms for energy harvesting
+            sensors,” IEEE Trans. Wireless Commun., vol. 11, no. 4, pp. 1434-1445, Apr. 2012, doi: <a
+              href="https://doi.org/10.1109/TWC.2012.032812.110623">10.1109/TWC.2012.032812.110623</a>.</li>
+          <li id="ref25">Oregon State University Extension Service, ”Environmental factors affecting plant growth,”
+            [Online]. Available: <a
+              href="https://extension.oregonstate.edu/gardening/techniques/environmental-factors-affecting-plant-growth">https://extension.oregonstate.edu/gardening/techniques/environmental-factors-affecting-plant-growth</a>.
+            [Accessed: 06-May-2024].</li>
+          <li id="ref26">University of Rhode Island, ”Drip Irrigation,” [Online]. Available: <a
+              href="https://web.uri.edu/safewater/protecting-water-quality-at-home/sustainable-landscaping/drip-irrigation/">https://web.uri.edu/safewater/protecting-water-quality-at-home/sustainable-landscaping/drip-irrigation/</a>.
+            [Accessed: 23-May-2024].</li>
         </ol>
       </div>
+
+
     </section>
 
 
