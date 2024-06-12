@@ -740,3 +740,22 @@ html {
       /* Set the width to 100% on phones */
   }
 }
+
+h3 {
+  text-align: left;
+}
+
+.code-inline {
+  background-color: #f4f4f4;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+pre {
+  background-color: #f4f4f4;
+  padding: 10px;
+  margin: 10px 0;
+  border-left: 10px solid #ccc;
+  overflow-x: auto;
+}
