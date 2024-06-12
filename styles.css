@@ -258,7 +258,7 @@ h2 {
 
 section {
   margin-bottom: 40px;
-  scroll-margin-top: 120px;
+  scroll-margin-top: 165px;
 }
 
 h1,
@@ -325,16 +325,16 @@ footer {
   background-color: rgba(255, 255, 255, 0.88);
   color: #E4EFE7;
   padding: 10px 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 1000;
 }
+
 .header2 {
   display: flex;
   height: 40px;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   position: fixed;
-  top: 80px;
+  top: 100px;
   left: 0;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.88);
@@ -343,6 +343,16 @@ footer {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 1000;
 }
+
+@media (max-width: 1100px) {
+
+  .header2 {
+    display: none;
+  }
+
+}
+
+
 
 .header h1 {
   font-weight: bold;
@@ -671,7 +681,7 @@ html {
 
 /* References */
 :target {
-  scroll-margin-top: 100px;
+  scroll-margin-top: 165px;
   /* Adjust the scroll margin */
 }
 
@@ -692,7 +702,7 @@ html {
 }
 
 :target {
-  scroll-margin-top: 100px;
+  scroll-margin-top: 165px;
   /* Adjust the scroll margin */
 }
 

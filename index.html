@@ -34,6 +34,7 @@
         <li><a class="toc-button" href="#related-work">Related Work</a></li>
         <li><a class="toc-button" href="#hardware">System</a></li>
         <li><a class="toc-button" href="#algorithm">Algorithm</a></li>
+        <li><a class="toc-button" href="#notifications">Notifications</a></li>
         <li><a class="toc-button" href="#evaluation">Evaluation</a></li>
         <li><a class="toc-button" href="#results">Results</a></li>
         <li><a class="toc-button" href="#appendix">Appendix</a></li>
@@ -81,7 +82,10 @@
           allowfullscreen></iframe>
       </div>
       <div class="video-container">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/sR5TEo4twLg?si=sKU44K7f5wwQxoSK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/sR5TEo4twLg?si=sKU44K7f5wwQxoSK"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
     </div>
 
@@ -382,8 +386,10 @@
         <figcaption>Fig. 2: Soil at 0% and 100% soil moisture content</figcaption>
 
         <h3 id="energy-profiling">Energy Profiling</h3>
-        <p>We need to understand how much the setup consumes to make decisions regarding energy management, sleep time, and sensing time. 
-          For this, we used a Direct Voltage supply to measure the current drawn during 5V supply by our device in different states. The measurements are as follows:</p>
+        <p>We need to understand how much the setup consumes to make decisions regarding energy management, sleep time,
+          and sensing time.
+          For this, we used a Direct Voltage supply to measure the current drawn during 5V supply by our device in
+          different states. The measurements are as follows:</p>
         <ul style="text-align: left; justify-content: left;">
           <li>In low power mode, current drawn is 140 mA.</li>
           <li>In active mode, current drawn is 160 mA.</li>
@@ -409,24 +415,31 @@
         <figure id="fig4" class="figure">
 
           <div class="center">
-            <img src="assets/Energy_Harvesting.webp" style="width: 80%" alt="Energy harvesting component specifications">
+            <img src="assets/Energy_Harvesting.webp" style="width: 80%"
+              alt="Energy harvesting component specifications">
           </div>
           <figcaption>Fig. 4: Energy harvesting components</figcaption>
         </figure>
         <h3 id="energy-autonomy">Optimization Techniques</h4>
-        <ul style="text-align: left;">
-          <li>Have <b>separate power sources</b> for sensing module and control module.
-            - Gives software control over sensor activation and operation.<br> We implemented this by connecting the power supply of the sensors to the Digital Pin 9 of the Arduino, so that we can
-              write HiGH or LOW to that pin to turn the sensing module ON or OFF in order to conserve energy. Only the actuator valve was directly connected to 5V supply, since it required more power
-              than supplied by the digital pin of the Arduino. However, the actuator only consumes power when turning the valve ON/OFF, which is an instantaneous occurence.
+          <ul style="text-align: left;">
+            <li>Have <b>separate power sources</b> for sensing module and control module.
+              - Gives software control over sensor activation and operation.<br> We implemented this by connecting the
+              power supply of the sensors to the Digital Pin 9 of the Arduino, so that we can
+              write HiGH or LOW to that pin to turn the sensing module ON or OFF in order to conserve energy. Only the
+              actuator valve was directly connected to 5V supply, since it required more power
+              than supplied by the digital pin of the Arduino. However, the actuator only consumes power when turning
+              the valve ON/OFF, which is an instantaneous occurence.
             </li><br>
-          <li>Sensor data is <b>not highly variable</b>, so we are not sensing continuously. Sensors are turned off and
-            Arduino is in low-power mode for majority of the time.</li>
-          <li><b>Adaptive Duty Cycling</b> - Battery is charged on good weather days, and sensor activity is lessened on
-            bad weather days (Low Battery Level + Ambient Light below threshold). This enables us to adapt duty cycling
-            to battery power and availability of ambient light.</li>
+            <li>Sensor data is <b>not highly variable</b>, so we are not sensing continuously. Sensors are turned off
+              and
+              Arduino is in low-power mode for majority of the time.</li>
+            <li><b>Adaptive Duty Cycling</b> - Battery is charged on good weather days, and sensor activity is lessened
+              on
+              bad weather days (Low Battery Level + Ambient Light below threshold). This enables us to adapt duty
+              cycling
+              to battery power and availability of ambient light.</li>
             <br> We discuss implementation of the last two techniques in the <a href="#algorithm">Algorithm Section</a>.
-        </ul>
+          </ul>
     </section>
 
     <h3 id="actuation-unit">Actuation Unit: Irrigation Technique</h3>
@@ -515,8 +528,11 @@ Setup(){
         <figcaption>Fig.5: Different Power Modes of Arduino Uno R4</figcaption>
       </figure>
       <p>
-        The Arduino microcontroller supports multiple low power modes. We decided to use the Software Standby Mode which can be directly transitioned to from the normal mode and consumes less power than the Sleep mode.
-        We do a one time setup to configure Arduino to use the Software Standby Mode whenever the "wfi" instruction is executed. The Arduino comes back to normal mode whenever it receives an interrupt from the RTC (Real time clock) module.
+        The Arduino microcontroller supports multiple low power modes. We decided to use the Software Standby Mode which
+        can be directly transitioned to from the normal mode and consumes less power than the Sleep mode.
+        We do a one time setup to configure Arduino to use the Software Standby Mode whenever the "wfi" instruction is
+        executed. The Arduino comes back to normal mode whenever it receives an interrupt from the RTC (Real time clock)
+        module.
       </p>
       <pre>
 void setup_low_power_mode()
@@ -528,9 +544,14 @@ void setup_low_power_mode()
   *ICU_WPEN = 1u << 24u;  // Software standby returns by RTC alarm interrupt enabled
 }      </pre>
       <h3>Application</h3>
-      The Arduino operates in an infinite loop, beginning with a battery level check. If the battery level exceeds a specified threshold, the Arduino activates the sensors, reads their values, and performs any necessary actuation. It then stores the data in the EEPROM for later retrieval and sets the next wake-up time to one hour.
-    If the battery level is below the threshold but the light intensity is sufficient, the Arduino still performs these steps. However, if both the battery level and light intensity are below their respective thresholds, the Arduino sets the next wake-up duration to three hours.
-Finally, the Arduino enters low power mode by setting an alarm in the RTC module and executing the "wfi" instruction.
+      The Arduino operates in an infinite loop, beginning with a battery level check. If the battery level exceeds a
+      specified threshold, the Arduino activates the sensors, reads their values, and performs any necessary actuation.
+      It then stores the data in the EEPROM for later retrieval and sets the next wake-up time to one hour.
+      If the battery level is below the threshold but the light intensity is sufficient, the Arduino still performs
+      these steps. However, if both the battery level and light intensity are below their respective thresholds, the
+      Arduino sets the next wake-up duration to three hours.
+      Finally, the Arduino enters low power mode by setting an alarm in the RTC module and executing the "wfi"
+      instruction.
       <pre>
 while True do
     Read Battery Level
@@ -773,11 +794,13 @@ void control_soil_moisture(int currentTime) {
 }
 </pre>
       <strong>Set Next Wake up Time():</strong>
-      <p>The Green Guardian system employs an adaptive duty cycling method to manage energy consumption efficiently. 
-        The algorithm evaluates the battery level and sets the next wake-up interval accordingly. 
-        If the battery level is above a predefined threshold, the system schedules the next wake-up in one hour. 
-        Similarly, if the battery level is below the threshold but the solar panel is receiving sufficient light, the system also sets the next wake-up duration to one hour. 
-        However, if both the battery level and the light intensity are below their respective thresholds, the system extends the wake-up interval to three hours. 
+      <p>The Green Guardian system employs an adaptive duty cycling method to manage energy consumption efficiently.
+        The algorithm evaluates the battery level and sets the next wake-up interval accordingly.
+        If the battery level is above a predefined threshold, the system schedules the next wake-up in one hour.
+        Similarly, if the battery level is below the threshold but the solar panel is receiving sufficient light, the
+        system also sets the next wake-up duration to one hour.
+        However, if both the battery level and the light intensity are below their respective thresholds, the system
+        extends the wake-up interval to three hours.
         This adaptive approach ensures that the system's energy demand aligns with the available energy supply.
       </p>
       <pre>
@@ -789,12 +812,45 @@ else
     Set wake up duration = 3 hours
 end if      </pre>
 
+      <h3 id="notifications">Notification System</h3>
+      <p>The notification system is a key component of the Green Guardian project. It provides visual feedback to the
+        user based on the plant's status using an LED matrix display on the Arduino UNO R4 WiFi. Different patterns and
+        symbols are shown to indicate various conditions and alerts, as seen in <a href="#fig6">Fig. 6</a>.</p>
+
+      <h3>LED Matrix Display</h3>
+      <p>The LED matrix display shows different symbols to alert the user about the plant's conditions. Below are the
+        symbols used in the notification system:</p>
+
+
+      <figure id="fig6" class="figure">
+        <img style="width: 50%;" src="assets/new_figs/notifications.webp" alt="LED Matrix Display Symbols"
+          class="implementation-diagram">
+        <figcaption>Fig. 6: LED Matrix Display Symbols</figcaption>
+      </figure>
+
+
+      <p>The image on the left shows the Arduino UNO R4 WiFi with the LED matrix display in action. The image on the
+        right explains the different symbols used in the notification system, including:</p>
+      <ul>
+        <li><strong>Sun:</strong> Indicates sufficient sunlight.</li>
+        <li><strong>Drop:</strong> Indicates low water level.</li>
+        <li><strong>Bad State:</strong> Indicates an error in the system.</li>
+        <li><strong>Too Warm:</strong> Indicates the temperature is too warm.</li>
+        <li><strong>Too Cold:</strong> Indicates the temperature is too cold.</li>
+        <li><strong>Shade:</strong> Indicates the plant needs to be moved to a shadier location.</li>
+        <li><strong>Too Warm Now:</strong> Immediate action required due to high temperature.</li>
+        <li><strong>Too Cold Now:</strong> Immediate action required due to low temperature.</li>
+        <li><strong>Need Sun Now:</strong> Immediate action required due to insufficient sunlight.</li>
+        <li><strong>Logo:</strong> Indicates sensors are working correctly - helpful for development.</li>
+        <li><strong>Shade Now:</strong> Immediate action required to move the plant to a shadier location.</li>
+      </ul>
+
       <section id="evaluation">
         <h2 id="evaluation">Evaluation</h2>
 
         <p>
           To evaluate the effectiveness of our system in keeping plants alive, we designed the following testbed, shown
-          in <a href="#fig6">Fig 6.</a> We acquired two basil plants from the same store, ensuring they were in similar
+          in <a href="#fig7">Fig 7.</a> We acquired two basil plants from the same store, ensuring they were in similar
           conditions. We placed them side by side in the same space and asked two participants to take care of one plant
           each: one using the Green Guardian system and one without it. We monitored relevant variables in both plants,
           such as
@@ -802,9 +858,9 @@ end if      </pre>
           evaluated their condition after 5 days.
         </p>
 
-        <figure id="fig6" class="figure">
-          <img style="width: 50%;"  src="assets/Testbed/testbed.webp" alt="Testbed" class="implementation-diagram">
-          <figcaption>Fig. 6: Evaluation setup. Basil plant with and without Green Guardian</figcaption>
+        <figure id="fig7" class="figure">
+          <img style="width: 50%;" src="assets/Testbed/testbed.webp" alt="Testbed" class="implementation-diagram">
+          <figcaption>Fig. 7: Evaluation setup. Basil plant with and without Green Guardian</figcaption>
         </figure>
 
         <p>
@@ -817,9 +873,12 @@ end if      </pre>
           and outdoors, making our findings relevant to a wide range of users.
         </p>
         <p>
-          
-We also aimed to quantify the time required for the Arduino to wake up from sleep and begin sensing. However, the RTC module we intended to use for this measurement has a resolution of 1 second, which is inadequate since the entire operation takes less than a second. 
-Therefore, we conclude that the interval time between CPU becoming active and turning on the sensing module is less than a second.
+
+          We also aimed to quantify the time required for the Arduino to wake up from sleep and begin sensing. However,
+          the RTC module we intended to use for this measurement has a resolution of 1 second, which is inadequate since
+          the entire operation takes less than a second.
+          Therefore, we conclude that the interval time between CPU becoming active and turning on the sensing module is
+          less than a second.
         </p>
 
         <p>We also defined a success metric to evaluate how our system performs compared to a person manually watering
@@ -830,7 +889,7 @@ Therefore, we conclude that the interval time between CPU becoming active and tu
 
       <section>
         <h2 id="results">Results</h2>
-        <p>We collected sensor data over five days, as depicted in <a href="#fig7">Fig 7.</a> The first chart
+        <p>We collected sensor data over five days, as depicted in <a href="#fig8">Fig 8.</a> The first chart
           illustrates the temperature in
           Celsius, which remains relatively stable throughout the observation period. The second chart presents humidity
           data. The third chart displays the amount of light reaching the plant. The fourth chart indicates the presence
@@ -843,20 +902,21 @@ Therefore, we conclude that the interval time between CPU becoming active and tu
           except for refilling the water bottle.
         </p>
 
-        <figure id="fig7" class="figure">
+        <figure id="fig8" class="figure">
           <img src="assets/new_figs/data_graphs.webp" alt="Data of Results" class="implementation-diagram">
-          <figcaption>Fig. 7: Data collected from 5th June to 10th June</figcaption>
+          <figcaption>Fig. 8: Data collected from 5th June to 10th June</figcaption>
         </figure>
 
-        <p>    
-          We also assessed the success metrics (<a href="#fig8">Fig 8.</a>). The Green Guardian system maintained a healthy plant
+        <p>
+          We also assessed the success metrics (<a href="#fig9">Fig 9.</a>). The Green Guardian system maintained a
+          healthy plant
           moisture level (15-40%) for 66.10% of the time. In contrast, plant 2, which was watered manually, consistently
           exhibited high moisture levels and only maintained healthy moisture for 0.0% of the time. These results
           demonstrate that our system is capable of sustaining healthy moisture levels for plants.</p>
 
-        <figure id="fig8" class="figure">
+        <figure id="fig9" class="figure">
           <img style="width: 25%;" src="assets/new_figs/table.png" alt="Success Metric" class="implementation-diagram">
-          <figcaption>Fig. 8: Success Rate as per defined Metric</figcaption>
+          <figcaption>Fig. 9: Success Rate as per defined Metric</figcaption>
         </figure>
       </section>
 
