@@ -77,10 +77,10 @@ figcaption {
 /* Adjust for smaller screens */
 @media (max-width: 768px) {
   .container {
-    width: 80%;
+    width: 85%;
     margin: 10px auto;
     /* Ensures centering on small screens */
-    padding: 10px;
+    padding: 20px;
   }
 }
 
@@ -339,18 +339,12 @@ footer {
   width: 100%;
   background-color: rgba(255, 255, 255, 0.88);
   color: #E4EFE7;
-  padding: 10px 20px;
+  padding: 0px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 1000;
 }
 
-@media (max-width: 1100px) {
 
-  .header2 {
-    display: none;
-  }
-
-}
 
 
 
@@ -390,6 +384,7 @@ nav button:hover {
   .header h1 {
     display: none;
   }
+
   .header2 {
     visibility: hidden;
   }
@@ -405,9 +400,6 @@ nav button:hover {
     border: 1px solid #225522;
 
   }
-
-
-
 
 }
 
@@ -522,8 +514,16 @@ footer {
     font-size: 18px;
   }
 
+  .updates-container {
+    display: none;
+  }
+
   .updates h2 {
     font-size: 18px;
+  }
+
+  .other-first {
+    margin-top: 120px;
   }
 }
 
@@ -679,7 +679,7 @@ html {
 }
 
 .first {
-  margin-top: 130px;
+  margin-top: 160px;
 }
 
 /* References */
@@ -790,4 +790,17 @@ pre {
   margin: 10px 0;
   border-left: 10px solid #ccc;
   overflow-x: auto;
+}
+
+@media (max-width: 1250px) {
+
+  .header2 {
+    display: none;
+  }
+
+  .first {
+    margin-top: 120px;
+
+  }
+
 }
